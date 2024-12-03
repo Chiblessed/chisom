@@ -47,13 +47,13 @@ export default function Home() {
     className={styles.box}>
       <Image src={Pictureof} width={600} height={400} alt='picture of me'  />
       <div className={styles.details}>
-        <h2>Hi, I'm <span>Chisom Ohanu</span> based in Lagos, Nigeria</h2>
+        <h2>Hi, I&apos;m <span>Chisom Ohanu</span> based in Lagos, Nigeria</h2>
         <p>A creative front-end developer with a background in Mass Communication.
-           I’ve transitioned from storytelling to coding, using Vue, React, Next.js,
+           I&apos;ve transitioned from storytelling to coding, using Vue, React, Next.js,
             and Nuxt.js to build engaging web experiences. 
           I love combining creativity with tech to design beautiful, user-friendly websites.
-When I’m not coding, you’ll find me indulging in new foods or embracing my goofy side.
- Let’s connect and create something amazing together!</p>
+When I&apos;m not coding, you&apos;ll find me indulging in new foods or embracing my goofy side.
+ Let&apos;s connect and create something amazing together!</p>
         <button>
         <a href="/OhanuChisomCv.pdf" download>
         Download Cv

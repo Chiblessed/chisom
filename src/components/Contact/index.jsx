@@ -3,10 +3,9 @@ import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
-import Magnetic from '../../common/Magnetic';
 import PictureMe from '../../../public/images/realme.png'
 
-export default function index() {
+export default function Index() {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,

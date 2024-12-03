@@ -2,7 +2,6 @@
 import styles from './style.module.scss'
 import { useState, useEffect, useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import gsap from 'gsap';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 import Image1 from '../../../public/images/Screenshot (24).jpg';

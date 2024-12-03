@@ -53,7 +53,7 @@ const { ref, inView } = useInView({
             }}>About Me</motion.h1>
       <div className={styles.aboutme}>
         <motion.p 
-         >Hey there!<span>👋</span>  I’m a a creative and adaptable front-end developer with 
+         >Hey there!<span>👋</span>  I&apos;m a a creative and adaptable front-end developer with 
             a background in Mass Communication.
               With a passion for storytelling and design, I now build beautiful,
              user-friendly websites and applications that engage and inspire.
@@ -62,13 +62,13 @@ const { ref, inView } = useInView({
             </motion.p>
             <motion.p
             >
-            Whether it’s crafting seamless interfaces or diving into the latest code trends,  
+            Whether it&apos;s crafting seamless interfaces or diving into the latest code trends,  
           I’m always excited to learn and grow.
-          When I'm not coding, you can usually find me exploring new restaurants <span>🍽️</span>,
+          When I&apos;m not coding, you can usually find me exploring new restaurants <span>🍽️</span>,
            experimenting with flavors, or getting into the goofy side of life <span>😜 </span> 
            (laughter is the best bug fix, right?). I believe creativity knows no bounds, 
            and I bring that mindset to every project I take on.
-Let’s create something awesome together!<span>🚀</span> 
+Let&apos;s create something awesome together!<span>🚀</span> 
             </motion.p>
       </div>
     
