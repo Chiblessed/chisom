@@ -1,0 +1,50 @@
+.projects{
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 1;
+    .body{
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        .projectsbody{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            button{
+                background: red;
+            }
+        }
+        div{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;  
+        }
+    }
+    
+   
+    .circleContainer{
+        background-color: red;
+        position: relative;
+        margin-top: 100px;
+        .circle{
+            height: 1550%;
+            width: 120%;
+            left: -10%;
+            border-radius: 0 0 50% 50%;
+            background-color: green;
+            z-index: 1;
+            position: absolute;
+            box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+        }
+    }
+}
