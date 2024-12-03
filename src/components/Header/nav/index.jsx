@@ -14,6 +14,7 @@ const navItems = [
   },
   {
     title: "Work",
+    
     href: "/work",
   },
   {

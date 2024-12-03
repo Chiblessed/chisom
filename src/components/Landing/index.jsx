@@ -4,13 +4,12 @@ import styles from './style.module.scss'
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { slideUp } from './animation';
+import { slideUp, opacity } from './animation';
 import { motion } from 'framer-motion';
+import Pictureof from '../../../public/images/realme.png'
 
 export default function Home() {
 
-  const firstText = useRef(null);
-  const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
   let direction = -1;
@@ -37,32 +36,39 @@ export default function Home() {
     else if(xPercent > 0){
       xPercent = -100;
     }
-    gsap.set(firstText.current, {xPercent: xPercent})
-    gsap.set(secondText.current, {xPercent: xPercent})
+ 
     requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
   }
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-      <Image 
-        src="/images/background.jpg"
-        fill={true}
-        alt="background"
-      />
-      <div className={styles.sliderContainer}>
-        <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
-        </div>
+    <section
+    className={styles.box}>
+      <Image src={Pictureof} width={600} height={400} alt='picture of me'  />
+      <div className={styles.details}>
+        <h2>Hi, I'm <span>Chisom Ohanu</span> based in Lagos, Nigeria</h2>
+        <p>A creative front-end developer with a background in Mass Communication.
+           I’ve transitioned from storytelling to coding, using Vue, React, Next.js,
+            and Nuxt.js to build engaging web experiences. 
+          I love combining creativity with tech to design beautiful, user-friendly websites.
+When I’m not coding, you’ll find me indulging in new foods or embracing my goofy side.
+ Let’s connect and create something amazing together!</p>
+        <button>
+        <a href="/OhanuChisomCv.pdf" download>
+        Download Cv
+        <motion.svg
+         width="10"
+         height="10" 
+        viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="black"/>
+                    </motion.svg>
+                    </a>
+
+        </button>
+
       </div>
-      <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="white"/>
-        </svg>
-        <p>Freelance</p>
-        <p>Designer & Developer</p>
-      </div>
+    </section>
     </motion.main>
   )
 }

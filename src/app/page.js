@@ -36,7 +36,6 @@ export default function Home() {
       <Landing />
       <Description />
       <Projects />
-      <SlidingImages />
       <Contact />
     </main>
   )

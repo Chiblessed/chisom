@@ -1,4 +1,4 @@
-.header{
+.header {
     position: absolute;
     display: flex;
     z-index: 1;
@@ -10,140 +10,185 @@
     font-weight: 300;
     box-sizing: border-box;
     align-items: center;
-    
-    .logo{
+  
+    .logo {
+      display: flex;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;  // Keep the logo (Code by Chisom) in front of the nav items
+      p {
+        margin: 0px;
+        transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      .copyright {
+        color: red;
+      }
+      .name {
         display: flex;
-        cursor: pointer;
-        p{
-            margin: 0px;
-            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: 5px;
+        transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        color: green;
+        p {
+          position: relative;
+          transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+          &:nth-of-type(2) {
+            padding-left: 0.3em;
+          }
+          &:nth-of-type(3) {
+            position: absolute;
+            left: 120px;
+            padding-left: 0.3em;
+          }
         }
-        .name{
-            display: flex;
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
-            margin-left: 5px;
-            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-            p{
-                position: relative;
-                transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-                &:nth-of-type(2){
-                    padding-left: 0.3em;
-                }
-                &:nth-of-type(3){
-                    position: absolute;
-                    left: 120px;
-                    padding-left: 0.3em;
-                }
-            }
+      }
+      &:hover {
+        .copyright {
+          transform: rotate(360deg);
         }
-        &:hover{
-            .copyright{
-                transform: rotate(360deg);
-            }
-            .name{
-                padding-right: 30px;
-                .codeBy{
-                    transform: translateX(-100%);
-                }
-                .dennis{
-                    transform: translateX(-65px);
-                }
-                .snellenberg{
-                    transform: translateX(-65px);
-                }
-            }
+        .name {
+          padding-right: 30px;
+          .codeBy {
+            transform: translateX(-100%);
+          }
+          .chisom {
+            transform: translateX(-65px);
+          }
+          .ohanu {
+            transform: translateX(-65px);
+          }
         }
+      }
     }
-    .nav{
-        display: flex;
-        align-items: center;
+  
+    .menuIcon {
+      font-size: 2.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      z-index: 2;  // Keep the menu icon in front of the nav items
+      position: relative;
+  
+      &.open .burgerIcon {
+        transform: rotate(45deg);  // Rotate the top part of the burger
+        top: -5px;
+        right: 8px;
+        background: white;
 
-        .el{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            z-index: 1;
-            padding: 15px;
-            cursor: pointer;
-            &:hover{
-                .indicator{
-                    transform: scale(1);
-                }
-            }
-            .indicator{
-                position: absolute;
-                width: 5px;
-                height: 5px;
-                top: 45px;
-                left: 50%;
-                background-color: white;
-                border-radius: 50%;
-                transform: scale(0) translateX(-50%);
-                transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
-            }
-        }
-        a{
-            cursor: pointer;
-        }
-    } 
-}
-.headerButtonContainer{
-    transform: scale(0);
+      }
+  
+      &.open .burgerIcon::before {
+        transform: rotate(-90deg); // Rotate the bottom part of the burger into the X shape
+        top: -2px;
+        right: -2px;
+        background: white;
+
+      }
+  
+      &.open .burgerIcon::after {
+        opacity: 0;  // Hide the middle part of the burger icon
+      }
+    }
+  
+    .burgerIcon {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+  
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: black;
+        transition: all 0.3s ease;
+
+      }
+  
+      &::before {
+        top: -10px;
+      }
+  
+      &::after {
+        top: 3px;
+        background:black ;
+      }
+      
+    }
+  }
+  
+  .backgrounddis {
+    background: rgba(0, 0, 0, 0.9);  // Dark background for the full-screen menu
     position: fixed;
-    right: 0px;
-    z-index: 4;
+    top: 0;
+    left: 0;
+    z-index: 1;  // Make sure the background and menu appear behind the fixed header
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+    }
+  
+    ul li {
+      margin: 15px 0;
+      font-size: 3rem;
+    }
+  
+    ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 6rem;
+      transition: color 0.3s;
+    }
+  
+    ul li a:hover {
+      color: #692d2d;
+    }
+  }
+  
 
-    .button{
-        position: relative;
-        margin: 20px;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background-color: #1C1D20;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  @media (max-width: 600px) {
+    .header {
+      padding: 20px 10px;  // Increase padding for tablets
     }
-    
-    .burger{
-        width: 100%;
-        position: relative;
-        z-index: 1;
-        &::after, &::before{
-            content: "";
-            display: block;
-            height: 1px;
-            width: 40%;
-            margin: auto;
-            background-color: white;
-            position: relative;
-            transition: transform 0.3s;
+
+    .logo {
+      .name {
+        p {
+          font-size: 1rem;  // Adjust text size for tablet
         }
-    
-        &::after{
-            top: -5px;
-        }
-    
-        &::before{
-            top: 5px;
-        }
+      }
     }
-    
-    .burgerActive{
-    
-        &::after{
-            transform: rotate(45deg);
-            top: -1px;
-        }
-    
-        &::before{
-            transform: rotate(-45deg);
-            top: 0px;
-        }
-        
-    }
+.backgrounddis{
+
+  ul li a {
+    font-size: 4rem;
+  }
 }
-
+    .menuIcon {
+      font-size: 3rem;  // Increase size for larger screens
+    }
+  }

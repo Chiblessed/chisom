@@ -1,8 +1,12 @@
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
-import Image from 'next/image';
 
+import Image from 'next/image';
+import Rounded from '../../common/RoundedButton';
+import Image1 from '../../../public/images/Screenshot (24).jpg';
+import Image2 from '../../../public/images/Screenshot (25).jpg'
+import Image3 from '../../../public/images/Screenshot (26).jpg'
 const slider1 = [
     {
         color: "#e3e5e7",
@@ -55,34 +59,59 @@ export default function index() {
 
     return (
         <div ref={container} className={styles.slidingImages}>
-            <motion.div style={{x: x1}} className={styles.slider}>
-                    {
-                        slider1.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
-                                <div className={styles.imageContainer}>
-                                    <Image 
-                                    fill={true}
-                                    alt={"image"}
-                                    src={`/images/${project.src}`}/>
-                                </div>
-                            </div>
-                        })
-                    }
+            <motion.div>
+            <main ref={container} className={styles.projects}>
+    <h1>Works</h1>
+    <div className={styles.body}>
+      <div className={styles.projectsbody}>
+        <Image src={Image1} width={450} height={250} alt=''/>
+        <p></p>
+        <div> 
+        <Rounded>
+      <p>Site</p>
+    </Rounded>     
+       <Rounded>
+      <p> Github</p>
+    </Rounded>      
+      </div>
+
+      </div>
+
+      <div className={styles.projectsbody}>
+      <Image src={Image2} width={450} height={250} alt=''/>
+        <p></p>
+        <div> 
+        <Rounded>
+      <p>Site</p>
+    </Rounded>
+            <Rounded>
+      <p> Github</p>
+    </Rounded>
+        </div>
+        
+      </div>
+
+      <div className={styles.projectsbody}>
+      <Image src={Image3} width={450} height={250} alt=''/>
+        <p></p>
+        <div> 
+        <Rounded>
+      <p>Site</p>
+    </Rounded>
+    <Rounded>
+      <p> Github</p>
+    </Rounded>       
+     </div>
+      </div>
+
+      
+
+    </div>
+        
+ 
+  </main>
                 </motion.div>
-                <motion.div style={{x: x2}} className={styles.slider}>
-                    {
-                        slider2.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
-                                <div key={index} className={styles.imageContainer}>
-                                    <Image 
-                                    fill={true}
-                                    alt={"image"}
-                                    src={`/images/${project.src}`}/>
-                                </div>
-                            </div>
-                        })
-                    }
-                </motion.div>
+             
                 <motion.div style={{height}} className={styles.circleContainer}>
                     <div className={styles.circle}></div>
                 </motion.div>
