@@ -55,7 +55,7 @@ export default function Home() {
 When I&apos;m not coding, you&apos;ll find me indulging in new foods or embracing my goofy side.
  Let&apos;s connect and create something amazing together!</p>
         <button>
-        <a href="/OhanuChisomCv.pdf" download>
+        <a href="./OhanuChisomCv.pdf" download>
         Download Cv
         <motion.svg
          width="10"
