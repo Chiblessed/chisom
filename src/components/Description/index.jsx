@@ -45,11 +45,11 @@ const { ref, inView } = useInView({
     className={styles.main}>
       <motion.h1
             ref={ref}
-            initial={{ rotate: 0 }} // Starting rotation
+            initial={{ rotate: 0 }} 
             animate={{
-              rotate: inView ? 320 : 0, // Rotate to 360 degrees when in view, or back to 0
+              rotate: inView ? 360 : 0, 
               transition: { duration: 2,       type: "spring",
-              } // Duration of the rotation
+              } 
             }}>About Me</motion.h1>
       <div className={styles.aboutme}>
         <motion.p 

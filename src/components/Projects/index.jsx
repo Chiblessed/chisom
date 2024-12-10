@@ -34,10 +34,11 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
   <main ref={container} className={styles.projects}>
     <h1>Works</h1>
     <div className={styles.body}>
+      
       <div className={styles.projectsbody}>
         <Image src={Image1} width={420} height={250} alt=''/>
         <div className={styles.projectdetails}>
-        <div> 
+        
         <Rounded  backgroundColor={"#b22222"}>
 <Link href='https://chiblessed.github.io/ChessInSlum/'>
 <p>Site</p>
@@ -48,7 +49,6 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
         <p> Github</p>
         </Link>
     </Rounded>      
-      </div>
 
         </div>
        
@@ -56,7 +56,7 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
       <div className={styles.projectsbody}>
       <Image src={Image2} width={420} height={250} alt=''/>
-        <div> 
+        <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
         <Link href='https://chiblessed.github.io/insurance/'>
 <p>Site</p>
@@ -72,7 +72,7 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
       <div className={styles.projectsbody}>
       <Image src={Image3} width={420} height={250} alt=''/>
-        <div> 
+        <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
         <Link href='https://chiblessed.github.io/Finpulse/'>
 <p>Site</p>

@@ -10,18 +10,20 @@
     font-weight: 300;
     box-sizing: border-box;
     align-items: center;
+    font-family: Oswald;
+  font-weight: 700;
   
     .logo {
       display: flex;
       cursor: pointer;
       position: relative;
-      z-index: 2;  // Keep the logo (Code by Chisom) in front of the nav items
+      z-index: 2;  
       p {
         margin: 0px;
         transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
       }
       .copyright {
-        color: red;
+        color: black;
       }
       .name {
         display: flex;
@@ -29,13 +31,15 @@
         overflow: hidden;
         white-space: nowrap;
         margin-left: 5px;
+        font-family: Lora;
+        font-style: italic;
         transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-        color: green;
+        color: black;
         p {
           position: relative;
           transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
           &:nth-of-type(2) {
-            padding-left: 0.3em;
+            padding-left: 0.5em;
           }
           &:nth-of-type(3) {
             position: absolute;
@@ -69,11 +73,11 @@
       border: none;
       color: white;
       cursor: pointer;
-      z-index: 2;  // Keep the menu icon in front of the nav items
+      z-index: 2;  
       position: relative;
   
       &.open .burgerIcon {
-        transform: rotate(45deg);  // Rotate the top part of the burger
+        transform: rotate(45deg);  
         top: -5px;
         right: 8px;
         background: white;
@@ -81,7 +85,7 @@
       }
   
       &.open .burgerIcon::before {
-        transform: rotate(-90deg); // Rotate the bottom part of the burger into the X shape
+        transform: rotate(-90deg); 
         top: -2px;
         right: -2px;
         background: white;
@@ -89,7 +93,7 @@
       }
   
       &.open .burgerIcon::after {
-        opacity: 0;  // Hide the middle part of the burger icon
+        opacity: 0;  
       }
     }
   
@@ -124,11 +128,11 @@
   }
   
   .backgrounddis {
-    background: rgba(0, 0, 0, 0.9);  // Dark background for the full-screen menu
+    background: rgba(0, 0, 0, 0.9);  
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;  // Make sure the background and menu appear behind the fixed header
+    z-index: 1;  
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -172,13 +176,13 @@
 
   @media (max-width: 600px) {
     .header {
-      padding: 20px 10px;  // Increase padding for tablets
+      padding: 20px 10px;  
     }
 
     .logo {
       .name {
         p {
-          font-size: 1rem;  // Adjust text size for tablet
+          font-size: 1rem; 
         }
       }
     }
@@ -189,6 +193,6 @@
   }
 }
     .menuIcon {
-      font-size: 3rem;  // Increase size for larger screens
+      font-size: 3rem;  
     }
   }

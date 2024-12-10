@@ -23,13 +23,20 @@
     margin-right: 20px;
     h2{
       font-size: 32px;
+      font-family: Oswald;
+
     }
     span{
       color: firebrick;
       font-size: 50px;
+      font-family: Lora;
+      font-weight: 700;
+      font-style: italic;
     }
     p{
-      font-size: 16px;
+      font-size: 18px;
+      font-family: Parkinsans;
+      font-weight: 700;
     }
     button{
       background: none;
@@ -41,6 +48,8 @@
       a{
         text-decoration: none;
         color: black;
+        font-family: Lora;
+
       }
       svg{
         transform: rotate(270deg);
@@ -53,7 +62,7 @@
   @media (max-width: 600px) {
     .landing{
       flex-direction: column;
-      padding-top: 180px;
+      padding-top: 480px;
     }
     .box{
       display: flex;
@@ -63,7 +72,8 @@
       gap: 10px;
       margin: 20px 60px;
       img{
-        height: 45vh;
+        height: 65vh;
+        padding-bottom: 70%;
       }
     }
     .details{
