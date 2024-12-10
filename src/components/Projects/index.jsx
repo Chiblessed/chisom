@@ -40,7 +40,7 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
         <div className={styles.projectdetails}>
         
         <Rounded  backgroundColor={"#b22222"}>
-<Link href='https://tinyurl.com/2c7t5um3'>
+<Link href='https://tinyurl.com/2xnj87ro'>
 <p>Site</p>
 </Link>
     </Rounded>     
