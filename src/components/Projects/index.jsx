@@ -58,9 +58,9 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
       <Image src={Image2} width={420} height={250} alt=''/>
         <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
-        <Link href='https://chiblessed.github.io/insurance/'>
+        <a href='https://chiblessed.github.io/insurance/'>
 <p>Site</p>
-</Link>    </Rounded>
+</a>    </Rounded>
             <Rounded  backgroundColor={"#b22222"}>
             <Link href='https://github.com/Chiblessed/insurance.git'>
         <p> Github</p>

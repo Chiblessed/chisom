@@ -45,7 +45,7 @@ export default function Home() {
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
     <section
     className={styles.box}>
-      <Image src={Pictureof} width={600} height={400} alt='picture of me'  />
+      <Image src={Pictureof} width={600} height={400} alt='picture of me'   />
       <div className={styles.details}>
         <h2>Hi, I&apos;m <span>Chisom Ohanu</span> based in Lagos, Nigeria</h2>
         <p>A creative front-end developer with a background in Mass Communication.
