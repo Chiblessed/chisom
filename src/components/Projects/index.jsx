@@ -40,7 +40,7 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
         <div className={styles.projectdetails}>
         
         <Rounded  backgroundColor={"#b22222"}>
-<Link href='https://chiblessed.github.io/ChessInSlum/'>
+<Link href='https://tinyurl.com/2c7t5um3'>
 <p>Site</p>
 </Link>
     </Rounded>     
@@ -58,9 +58,9 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
       <Image src={Image2} width={420} height={250} alt=''/>
         <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
-        <a href='https://chiblessed.github.io/insurance/'>
+        <Link href='https://tinyurl.com/24fmj7ub'>
 <p>Site</p>
-</a>    </Rounded>
+</Link>    </Rounded>
             <Rounded  backgroundColor={"#b22222"}>
             <Link href='https://github.com/Chiblessed/insurance.git'>
         <p> Github</p>
@@ -74,7 +74,7 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
       <Image src={Image3} width={420} height={250} alt=''/>
         <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
-        <Link href='https://chiblessed.github.io/Finpulse/'>
+        <Link href='https://tinyurl.com/27lvz99d'>
 <p>Site</p>
 
 </Link>    </Rounded>
