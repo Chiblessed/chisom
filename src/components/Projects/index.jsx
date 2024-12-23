@@ -38,6 +38,12 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
       
       <div className={styles.projectsbody}>
         <Image src={Image1} width={420} height={250} alt=''/>
+        <p className={styles.projectssub}>The Chess-in-Slum website, built with React.js, empowers
+           underserved communities through chess education. 
+          Featuring an interactive chessboard, event registration,
+           donation tracking, and success stories, it&apos;s a dynamic platform for 
+           engagement. Optimized for performance and accessibility, it inspires support 
+           for its mission and fosters learning.</p>
         <div className={styles.projectdetails}>
         
         <Rounded  backgroundColor={"#b22222"}>
@@ -56,6 +62,15 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
       </div>
       <div className={styles.projectsbody}>
         <Image src={Image4} width={420} height={250} alt=''/>
+        <p className={styles.projectssub}>
+        The interior decor website, built with Nuxt.js and GSAP, 
+        offers a sleek, immersive experience for showcasing designs.
+         With smooth scrolling and animations powered by GSAP,
+          it highlights portfolio pieces, services, and client testimonials. 
+          Optimized for performance and responsiveness, it creates a 
+          visually captivating platform for 
+        engaging clients and promoting interior design excellence.
+        </p>
         <div className={styles.projectdetails}>
         
         <Rounded  backgroundColor={"#b22222"}>
@@ -75,6 +90,14 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
       <div className={styles.projectsbody}>
       <Image src={Image2} width={420} height={250} alt=''/>
+      <p className={styles.projectssub}>
+      The insurance landing page, built with Vue.js,
+       provides a clean and user-friendly interface to 
+       showcase services and benefits. Featuring interactive forms, 
+       clear CTAs, and responsive design, it simplifies insurance
+        navigation for users. Optimized for performance,
+       it effectively engages visitors and drives conversions.
+      </p>
         <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
         <Link href='https://tinyurl.com/24fmj7ub'>
@@ -91,6 +114,14 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
       <div className={styles.projectsbody}>
       <Image src={Image3} width={420} height={250} alt=''/>
+      <p className={styles.projectssub}>
+      The FinPulse website, built with React.js and 
+      Framer Motion, delivers a dynamic and engaging experience 
+      for showcasing fintech solutions. With smooth animations 
+      and intuitive navigation, it highlights services, features, 
+      and client success stories. Optimized for performance and responsiveness, 
+      it reflects innovation and builds trust with users.
+      </p>
         <div className={styles.projectdetails}> 
         <Rounded  backgroundColor={"#b22222"}>
         <Link href='https://tinyurl.com/27lvz99d'>
