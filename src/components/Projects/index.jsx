@@ -5,6 +5,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 import Image1 from '../../../public/images/Screenshot (24).jpg';
+import Image4 from '../../../public/images/image0 (3).jpeg';
 import Image2 from '../../../public/images/Screenshot (25).jpg'
 import Image3 from '../../../public/images/Screenshot (26).jpg';
 import Link from 'next/link';
@@ -46,6 +47,24 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
     </Rounded>     
        <Rounded  backgroundColor={"#b22222"}>
         <Link href='https://github.com/Chiblessed/ChessInSlum.git'>
+        <p> Github</p>
+        </Link>
+    </Rounded>      
+
+        </div>
+       
+      </div>
+      <div className={styles.projectsbody}>
+        <Image src={Image4} width={420} height={250} alt=''/>
+        <div className={styles.projectdetails}>
+        
+        <Rounded  backgroundColor={"#b22222"}>
+<Link href='https://selhono-interior.netlify.app/'>
+<p>Site</p>
+</Link>
+    </Rounded>     
+       <Rounded  backgroundColor={"#b22222"}>
+        <Link href='https://github.com/Chiblessed/selhono'>
         <p> Github</p>
         </Link>
     </Rounded>      
