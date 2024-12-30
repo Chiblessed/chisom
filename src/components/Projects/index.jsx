@@ -8,6 +8,8 @@ import Image1 from '../../../public/images/Screenshot (24).jpg';
 import Image4 from '../../../public/images/image0 (3).jpeg';
 import Image2 from '../../../public/images/Screenshot (25).jpg'
 import Image3 from '../../../public/images/Screenshot (26).jpg';
+import Image5 from '../../../public/images/Screenshot (30) (1).jpg';
+
 import Link from 'next/link';
 
 
@@ -87,6 +89,33 @@ const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
         </div>
        
       </div>
+
+
+      <div className={styles.projectsbody}>
+        <Image src={Image5} width={420} height={250} alt=''/>
+        <p className={styles.projectssub}>The Lemon Wares platform, built with Vue.js,
+           delivers blazing-fast web hosting for individuals and businesses.
+            Featuring intuitive navigation, dynamic animations powered by Vuemotion,
+             and sleek styling with TailwindCSS, it’s designed for seamless user experiences. 
+             Backed by 24x7x365 support, 
+          it ensures performance, reliability, and accessibility for websites of all sizes.</p>
+        <div className={styles.projectdetails}>
+        
+        <Rounded  backgroundColor={"#b22222"}>
+<Link href='https://chiblessed.github.io/lemon-wares/'>
+<p>Site</p>
+</Link>
+    </Rounded>     
+       <Rounded  backgroundColor={"#b22222"}>
+        <Link href='https://github.com/Chiblessed/lemon-wares'>
+        <p> Github</p>
+        </Link>
+    </Rounded>      
+
+        </div>
+       
+      </div>
+
 
       <div className={styles.projectsbody}>
       <Image src={Image2} width={420} height={250} alt=''/>
