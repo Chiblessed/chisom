@@ -154,7 +154,9 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
    </div>
 
   </div>
-  <button  className={`${styles.mintext} bg-black relative top-20 z-40  px-4 py-2 rounded-[15px] shadow-dark-500 text-white hover:bg-transparent hover:border-2 hover:border-solid hover:border-black hover:textblack`}>More Projects</button>
+  <button  className={`${styles.mintext} bg-black relative top-20 z-40  px-4 py-2 rounded-[15px] shadow-dark-500 text-white hover:bg-transparent hover:border-2 hover:border-solid hover:border-black hover:textblack`}>
+    <Link href='/works'> More Projects</Link>
+  </button>
 </div>
 
     </section>

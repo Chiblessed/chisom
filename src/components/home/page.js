@@ -7,8 +7,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import Work from "../work/page";
 import Link from "next/link";
+import resume from '../../../public/maincv.pdf'
 
 
 
@@ -82,7 +82,11 @@ scale:0
         <p className={`${styles.heading2} text-2xl pt-5`}> A Frontend Developer based in Lagos, Nigeria.</p>
         
         <div className="flex items-center gap-5 mt-5">
-            <button className="border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">Download CV</button>
+            <button className="border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">
+              <Link href={resume} download={resume} >
+              Download CV
+              </Link>
+            </button>
             <button className="border-2 border-solid border-black  text-black text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">
               <Link href='/about'>
               Get to Know me
