@@ -7,11 +7,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'fontPrim': ['Jost'],
-        'fontPrim1': ['Rye'],
-
-            },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
