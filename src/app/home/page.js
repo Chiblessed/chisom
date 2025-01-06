@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import Link from "next/link";
+import Head from "next/head";
 
 
 
@@ -59,12 +60,18 @@ useEffect(() => {
 
   return (
     <>
+    <Head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+                    <link
+            href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+            rel="stylesheet"
+          />
+    </Head>
     <div>
       <div ref={ref} >
        
         <ShaderBackground  />
-
-   
       <motion.main
       initial= {{opacity: 0,
         rotate: -360,
