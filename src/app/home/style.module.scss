@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Arbutus&family=Asset&family=Bungee+Shade&family=DM+Serif+Display:ital@0;1&display=swap');
 
 .heading{
-    font-family: "Bungee Shade";
+    font-family: "Bungee Shade" !important;
     font-weight: 400;
     font-style: normal;
 }
   .heading2{
-    font-family: 'DM Serif Display';
+    font-family: 'DM Serif Display' !important;
   }
   .bgbody{
     background: linear-gradient(to right, rgb(219, 38, 195), rgb(98, 71, 197), rgb(199, 42, 178));

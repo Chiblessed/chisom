@@ -4,7 +4,7 @@ import "./globals.css";
 import Lenis from "lenis";
 import { ReactLenis, useLenis } from "lenis/react";
 import Navbar from "@/components/navbar/page";
-import styles from './global.module.scss';
+import styles from './global.scss';
 
 //export const metadata = {
  // title: "Create Next App",

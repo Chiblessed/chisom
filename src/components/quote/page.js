@@ -33,13 +33,13 @@ const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
             opacity: 1,
             y: 0,
             duration: 1,
-            stagger: 0.05, // Stagger the animation for each character
+            stagger: 0.05, 
             ease: "power4.out",
             scrollTrigger: {
-              trigger: ".quote", // Target the element with the class `quote`
-              start: "top bottom", // Start the animation when the element enters the viewport
-              end: "top 50%", // End when the element reaches the middle of the viewport
-              scrub: false, // Smoothly animate based on scroll
+              trigger: ".quote", 
+              start: "top bottom",
+              end: "top 50%", 
+              scrub: false, 
             },
           }
         );
