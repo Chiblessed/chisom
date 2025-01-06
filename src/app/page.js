@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import Hero from "@/components/home/page";
+import Hero from "@/app/home/page";
 import Index from "@/components/preloader";
 import { AnimatePresence } from "framer-motion";
 export default function Home() {

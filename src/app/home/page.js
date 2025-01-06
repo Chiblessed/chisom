@@ -1,8 +1,8 @@
 "use client";
 import { useRef,useEffect } from "react";
 import styles from './style.module.scss'; 
-import ShaderBackground from "../shader";
-import MiniAbout from "../quote/page";
+import ShaderBackground from "../../components/shader";
+import MiniAbout from "../../components/quote/page";
 import { motion, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
