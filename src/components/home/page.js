@@ -8,7 +8,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import Link from "next/link";
-import resume from '../../../public/maincv.pdf'
 
 
 
@@ -83,9 +82,9 @@ scale:0
         
         <div className="flex items-center gap-5 mt-5">
             <button className="border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">
-              <Link href={resume} download={resume} >
-              Download CV
-              </Link>
+            <Link href="/maincv.pdf" passHref>
+        <a download="maincv.pdf">Download CV</a>
+      </Link>
             </button>
             <button className="border-2 border-solid border-black  text-black text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">
               <Link href='/about'>
