@@ -45,7 +45,7 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
     <motion.main 
     style={{scale, rotate}}
     className={`${styles.bgbody} relative`} >
-    <section className=' h-[470vh] sm:h-[350vh] md:h-[230vh] lg:h-[470vh]'>
+    <section className=' h-[470vh] sm:h-[390vh] md:h-[430vh] lg:h-[470vh]'>
 <h2 className={`${styles.heading} text-center text-6xl text-black pt-20`}>
   Projects 
 </h2>
