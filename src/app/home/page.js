@@ -91,6 +91,7 @@ scale:0
             <button className={`${styles.heading2} border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
             <Link href="/maincv.pdf"  passHref>
             <a download="maincv.pdf">Download CV</a>
+
             </Link>
             </button>
             <button className={`${styles.heading2} border-2 border-solid border-black  text-black text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
