@@ -11,6 +11,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        'custom-glow': '0 0 10px rgba(51, 51, 53, 0.39), 0 0 20px rgba(51, 51, 53, 0.3)',
+      },
       screens: {
         'sm': { 'max': '600px' },   // Small devices (phones)
         'md': { 'min': '810px' },   // Medium devices (tablets)

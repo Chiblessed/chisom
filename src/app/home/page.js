@@ -54,7 +54,7 @@ useEffect(() => {
   
 }, []);
 
-      
+      //<a download="maincv.pdf">Download CV</a>
   
       
 
@@ -62,7 +62,7 @@ useEffect(() => {
     <>
     <Head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                     <link
             href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
             rel="stylesheet"
@@ -88,12 +88,12 @@ scale:0
         <p className={`${styles.heading2} text-2xl pt-5`}> A Frontend Developer based in Lagos, Nigeria.</p>
         
         <div className="flex items-center gap-5 mt-5">
-            <button className="border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">
-            <Link href="/maincv.pdf" passHref>
-        <a download="maincv.pdf">Download CV</a>
-      </Link>
+            <button className={`${styles.heading2} border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
+            <Link href="/maincv.pdf"  passHref>
+            <a download="maincv.pdf">Download CV</a>
+            </Link>
             </button>
-            <button className="border-2 border-solid border-black  text-black text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2">
+            <button className={`${styles.heading2} border-2 border-solid border-black  text-black text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
               <Link href='/about'>
               Get to Know me
               </Link>

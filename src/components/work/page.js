@@ -44,14 +44,14 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
     <>
     <motion.main 
     style={{scale, rotate}}
-    className={`${styles.bgbody} relative`} >
+    className={`${styles.bgbody} relative rounded-2xl`} >
     <section className=' h-[510vh] sm:h-[400vh] md:h-[430vh] lg:h-[500vh]'>
 <h2 className={`${styles.head3} text-center text-6xl text-black pt-20`}>
   Projects 
 </h2>
 <div className='flex flex-col items-center justify-center gap-14 pt-10 mt-12 pb-52'>
-  <div className='bg-pink-600 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-10  z-0 w-[70vw] sm:w-[100vw] sm:top-10'>
-    <h2 className={`${styles.head3} pt-5 pb-5 text-3xl`}>Chess-In Slum</h2>
+  <div className='bg-white text-white rounded-[12px] shadow-custom-glow flex flex-col items-center justify-center sticky top-10  z-0 w-[70vw] sm:w-[100vw] sm:top-10'>
+    <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>Chess-In Slum</h2>
     <Image src={Image1} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5  sm:gap-2'>
     <button className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
@@ -72,8 +72,8 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
    </div>
 
   </div>
-  <div className='bg-purple-800 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-14  z-0  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl`}>Selhono</h2>
+  <div className=' bg-white text-white rounded-[12px] shadow-custom-glow flex flex-col items-center justify-center sticky top-14  z-0  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>Selhono</h2>
   <Image src={Image2} alt='selhono img' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5 sm:flex-col'>
     <div className='flex items-center justify-center gap-10 '>
@@ -99,8 +99,8 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
    </div>
 
   </div>
-  <div className='bg-blue-800 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-20  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl`}>Lemon Wares</h2>
+  <div className='bg-white rounded-[12px] text-white shadow-custom-glow flex flex-col items-center justify-center sticky top-20  z-40  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>Lemon Wares</h2>
   <Image src={Image3} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5 sm:flex-col'>
     <div className='flex items-center justify-center gap-10'>
@@ -127,8 +127,8 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
    </div>
 
   </div>
-  <div className='bg-pink-600 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-10  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl`}>Finpulse</h2>
+  <div className='bg-white rounded-[12px] text-white shadow-custom-glow flex flex-col items-center justify-center sticky top-10  z-40  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.head3} text-black pt-5 pb-5 text-3xl`}>Finpulse</h2>
   <Image src={Image4} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-4 pt-5 sm:flex-col'>
     <div className='flex items-center justify-center gap-4'>
@@ -161,7 +161,7 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
 
     </section>
     </motion.main>
-<footer className={`${styles.footerbg} bg-black h-[100vh] sm:h-[120vh] md:h-[70vh] lg:h-[100vh] text-white flex flex-col items-center justify-center`}>
+<footer className={`${styles.footerbg} rounded-2xl bg-black h-[100vh] sm:h-[120vh] md:h-[70vh] lg:h-[100vh] text-white flex flex-col items-center justify-center`}>
 <h2 className={`${styles.head3} text-center text-6xl text-white pt-5 pb-20`}>Let's Work Together</h2>
 <form ref={form} onSubmit={sendEmail} className="flex flex-col items-center justify-center">
   <div className="flex items-center justify-center gap-5 mb-4 sm:flex-col">
@@ -176,7 +176,7 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
   <label className={`${styles.mintext} text-3xl mb-2`}>Message:</label>
   <textarea name="message" className="text-black font-fontPrim text-xl w-[25rem]  sm:w-[20rem] h-32 px-3 focus:outline-none py-2 rounded-[12px] resize-none"  required/>
   </div>
-   <input type="submit" value="Send" className="bg-white mt-10 text-black font-fontPrim text-xl cursor-pointer px-5  focus:outline-none py-2 rounded-[12px]" />
+   <input type="submit" value="Send" className={`${styles.mintext} bg-white mt-10 text-black font-fontPrim text-xl cursor-pointer px-5  focus:outline-none py-2 rounded-[12px]`} />
 
     </form>
 </footer>

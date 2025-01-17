@@ -25,8 +25,8 @@ const Work = () => {
           Projects
         </h2>
         <div className='flex flex-col items-center justify-center gap-24 pt-3 mt-12 sm:gap-10'>
-        <div className='bg-zinc-700 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-3  z-0  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl`}>Selhono</h2>
+        <div className='bg-white shadow-custom-glow rounded-[12px] text-white flex flex-col items-center justify-center sticky top-3  z-0  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Selhono</h2>
   <Image src={Image5} alt='selhono img' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5'>
     <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Nuxt</button>
@@ -48,8 +48,8 @@ const Work = () => {
    </div>
 
   </div>
-  <div className='bg-zinc-500 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-10  z-0 w-[70vw] sm:w-[100vw]'>
-    <h2 className={`${styles.heading} pt-5 pb-5 text-3xl`}>Chess-In Slum</h2>
+  <div className='bg-white shadow-custom-glow rounded-[12px] text-white flex flex-col items-center justify-center sticky top-10  z-0 w-[70vw] sm:w-[100vw]'>
+    <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Chess-In Slum</h2>
     <Image src={Image1} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5'>
     <button className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
@@ -69,8 +69,8 @@ const Work = () => {
       </button></div>
 
   </div>
-  <div className='bg-zinc-400 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-14  z-0  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl`}>Insurance</h2>
+  <div className='bg-white shadow-custom-glow rounded-[12px] text-white flex flex-col items-center justify-center sticky top-14  z-0  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Insurance</h2>
   <Image src={Image2} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5'>
     <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
@@ -90,8 +90,8 @@ const Work = () => {
     </button>  </div>
 
   </div>
-  <div className='bg-zinc-300 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-20  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl`}>Lemon Wares</h2>
+  <div className='bg-white shadow-custom-glow rounded-[12px] text-white flex flex-col items-center justify-center sticky top-20  z-40  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Lemon Wares</h2>
   <Image src={Image3} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5'>
     <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
@@ -112,8 +112,8 @@ const Work = () => {
     </button> </div>
 
   </div>
-  <div className='bg-zinc-200 rounded-[12px] text-white flex flex-col items-center justify-center sticky top-10  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl`}>Finpulse</h2>
+  <div className='bg-white shadow-custom-glow rounded-[12px] text-white flex flex-col items-center justify-center sticky top-10  z-40  w-[70vw] sm:w-[100vw]'>
+  <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Finpulse</h2>
   <Image src={Image4} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-4 pt-5'>
     <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
