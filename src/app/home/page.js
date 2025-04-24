@@ -85,12 +85,13 @@ scale:0
       style={{y: textY}} 
       className="relative min-h-screen flex flex-col items-center justify-center text-black">
         <h1  className={`${styles.heading} text-8xl text-center font-semibold sm:text-6xl`}>Ohanu Chisom Blessing</h1>
-        <p className={`${styles.heading2} text-2xl pt-5`}> A Frontend Developer based in Lagos, Nigeria.</p>
+        <p className={`${styles.heading2} text-2xl pt-5 max-sm:text-center`}> A Frontend Developer based in Lagos, Nigeria.</p>
         
         <div className="flex items-center gap-5 mt-5">
             <button className={`${styles.heading2} border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
             <Link href="/maincv.pdf"  passHref>
             <a download="maincv.pdf">Download CV</a>
+
 
             </Link>
             </button>

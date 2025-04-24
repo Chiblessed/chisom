@@ -14,7 +14,7 @@ const MiniAbout = () => {
     target: container,
     offset: ['start start', 'end end']
   })
-const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8])
+const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9])
 const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
 
     useEffect(() => {
@@ -57,10 +57,12 @@ const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
          style={{scale, rotate}}
           className="sticky top-0 overflow-x-hidden bg-black text-white text-center h-[120vh] w-full ">
             <section >
-            <blockquote className="quote text-6xl font-[Poppins] px-5 pt-36">
-            "The only limit to your impact is your imagination, your CSS skills, and how many browsers you’re willing to support."
-            
-            </blockquote>
+          <h1 className="text-6xl px-3 pt-24">
+          I help brands, businesses, and organizations bring their ideas to life through clean,
+           responsive, and user-focused websites. My goal is to create digital experiences that
+            are not only visually appealing but also intuitive and accessible—so users can easily engage, 
+          navigate, and connect with what you offer.
+          </h1>
 
             </section>
          </motion.main>

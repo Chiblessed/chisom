@@ -1,13 +1,14 @@
 "use client"
-import {React, useRef, useState} from 'react';
+import {React, useRef, useEffect} from 'react';
 import styles from './styles.module.scss'
 import { motion, useTransform } from "framer-motion";
 import Image2 from '../../../public/image0 (3).jpeg';
 import Image1 from '../../../public/Screenshot (24).jpg';
-import Image3 from '../../../public/Screenshot (30) (1).jpg';
+import Image3 from '../../../public/image0.jpeg';
 import Image4 from '../../../public/Screenshot (26).jpg';
 import Image from 'next/image';
 import emailjs from '@emailjs/browser';
+import gsap from 'gsap';
 import Link from 'next/link';
 
 export default function Work({scrollYProgress}) {
@@ -36,6 +37,15 @@ export default function Work({scrollYProgress}) {
         },
       );
   };
+  useEffect(() => {
+    const marquee = document.querySelector('.marquee')
+gsap.to(marquee , {
+  xPercent: -100,
+  repeat: -1,
+  duration: 5,
+  ease: 'linear'
+})
+  }, [])
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1])
 const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
@@ -100,27 +110,27 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
 
   </div>
   <div className='bg-white rounded-[12px] text-white shadow-custom-glow flex flex-col items-center justify-center sticky top-20  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>Lemon Wares</h2>
+  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>African Business Radio</h2>
   <Image src={Image3} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5 sm:flex-col'>
     <div className='flex items-center justify-center gap-10'>
-    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
+    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Next.js</button>
    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
 </div>
 <div className='flex items-center justify-center gap-10'>
-<button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Framer Motion</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
+<button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Restful API</button>
+   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React Query</button>
    
 </div>
     </div>
    <div  className={`${styles.mintext} mt-5`}>
     <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://chiblessed.github.io/lemon-wares/">
+      <Link href="https://african-business-radio-dun.vercel.app/">
       Site
       </Link>
     </button>
     <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://github.com/Chiblessed/lemon-wares">
+      <Link href="https://github.com/Chiblessed/business-radio">
       Github
       </Link>
     </button>
@@ -162,7 +172,12 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
     </section>
     </motion.main>
 <footer className={`${styles.footerbg} rounded-2xl bg-black h-[100vh] sm:h-[120vh] md:h-[70vh] lg:h-[100vh] text-white flex flex-col items-center justify-center`}>
-<h2 className={`${styles.head3} text-center text-6xl text-white pt-5 pb-20`}>Let's Work Together</h2>
+<div className="marquee relative py-8 overflow-hidden flex w-full gap-5 whitespace-nowrap">
+<h2 className={`${styles.head3} text-center text-6xl text-white max-sm:text-4xl max-sm:py-7 `}>Let's Work Together</h2>
+
+
+
+</div>
 <form ref={form} onSubmit={sendEmail} className="flex flex-col items-center justify-center">
   <div className="flex items-center justify-center gap-5 mb-4 sm:flex-col">
   <label className={`${styles.mintext} text-3xl mb-2`}>Name:</label>
