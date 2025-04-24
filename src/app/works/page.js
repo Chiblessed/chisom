@@ -33,22 +33,22 @@ const Work = () => {
   <Image src={Image6} alt='selhono img' width={800} height={200} />
     <div className='flex items-center justify-center gap-5 pt-5 sm:flex-col'>
       <div className='flex items-center justify-center gap-2'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Nextjs</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Nextjs</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
       </div>
       <div className='flex items-center justify-center gap-2'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Restful API</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React Query</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Restful API</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>React Query</button>
     
       </div>
   </div>
    <div  className={`${styles.mintext} mt-5`}>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:text-black hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://african-business-radio-dun.vercel.app/">
       Site
       </Link>
       </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:text-black hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://github.com/Chiblessed/business-radio">
       Github
       </Link>
@@ -65,22 +65,22 @@ const Work = () => {
   <Image src={Image5} alt='selhono img' width={800} height={200} />
     <div className='flex items-center justify-center gap-5 pt-5 sm:flex-col'>
       <div className='flex items-center justify-center gap-2'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Nuxt</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Nuxt</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
       </div>
       <div className='flex items-center justify-center gap-2'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>GSAP</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>GSAP</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
     
       </div>
   </div>
    <div  className={`${styles.mintext} mt-5`}>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 hover:text-black py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://selhono-interior.netlify.app/">
       Site
       </Link>
       </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 hover:text-black py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://github.com/Chiblessed/selhono">
       Github
       </Link>
@@ -92,17 +92,17 @@ const Work = () => {
     <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Chess-In Slum</h2>
     <Image src={Image1} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5'>
-    <button className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
+    <button className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
     </div>
    <div  className={`${styles.mintext} mt-5`}>
-   <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" > 
+   <button  className="bg-black px-6 hover:text-black py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" > 
       <Link href='https://chiblessed.github.io/ChessInSlum/'>
       Site
       </Link>
       </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 hover:text-black py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href='https://github.com/Chiblessed/ChessInSlum'>
       Github
       </Link>
@@ -113,17 +113,17 @@ const Work = () => {
   <h2 className={`${styles.heading} pt-5 pb-5 text-3xl text-black`}>Insurance</h2>
   <Image src={Image2} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-10 pt-5'>
-    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
+    <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
     </div>
    <div  className={`${styles.mintext} mt-5`}>
-   <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+   <button  className="bg-black px-6 hover:text-black py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://chiblessed.github.io/insurance/">
       Site
       </Link>
     </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 py-2 hover:text-black rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://github.com/Chiblessed/insurance">
       Github
       </Link>
@@ -135,21 +135,21 @@ const Work = () => {
   <Image src={Image3} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-5 pt-5 sm:flex-col'>
       <div className='flex items-center justify-center gap-3'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Vue</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
       </div>
       <div className='flex items-center justify-center gap-3'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Framer Motion</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Framer Motion</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
       </div>
  </div>
    <div  className={`${styles.mintext} mt-5`}>
-   <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+   <button  className="bg-black px-6 py-2 hover:text-black rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://chiblessed.github.io/lemon-wares/">
       Site
       </Link>
     </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 py-2 hover:text-black rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://github.com/Chiblessed/lemon-wares">
       Github
       </Link>
@@ -161,21 +161,21 @@ const Work = () => {
   <Image src={Image4} alt='chess-in-slum image' width={800} height={200} />
     <div className='flex items-center justify-center gap-4 pt-5 sm:flex-col'>
       <div className='flex items-center justify-center gap-3'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
       </div>
       <div className='flex items-center justify-center gap-3'>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Framer Motion</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
+      <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>Framer Motion</button>
+   <button  className={`${styles.mintext} bg-black/30 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
       </div>
  </div>
    <div  className={`${styles.mintext} mt-5`}>
-   <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+   <button  className="bg-black px-6 py-2 rounded-[20px] hover:text-black hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://chiblessed.github.io/Finpulse/">
       Site
       </Link>
     </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
+    <button  className="bg-black px-6 py-2 rounded-[20px] hover:text-black hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
       <Link href="https://github.com/Chiblessed/Finpulse">
       Github
       </Link>
