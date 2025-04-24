@@ -37,15 +37,7 @@ export default function Work({scrollYProgress}) {
         },
       );
   };
-  useEffect(() => {
-    const marquee = document.querySelector('.marquee')
-gsap.to(marquee , {
-  xPercent: -100,
-  repeat: -1,
-  duration: 5,
-  ease: 'linear'
-})
-  }, [])
+
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1])
 const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
@@ -172,7 +164,7 @@ const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
     </section>
     </motion.main>
 <footer className={`${styles.footerbg} rounded-2xl bg-black h-[100vh] sm:h-[120vh] md:h-[70vh] lg:h-[100vh] text-white flex flex-col items-center justify-center`}>
-<div className="marquee relative py-8 overflow-hidden flex w-full gap-5 whitespace-nowrap">
+<div className=" relative py-8 overflow-hidden flex w-full gap-5 whitespace-nowrap">
 <h2 className={`${styles.head3} text-center text-6xl text-white max-sm:text-4xl max-sm:py-7 `}>Let's Work Together</h2>
 
 
