@@ -5,7 +5,7 @@ import Image1 from '../../../public/avatar of me.png'
 
 const About = () => {
     return ( <>
-<main className="bg-primary -z-10  h-screen">
+<main className="bg-primary -z-10  h-full">
       <section className="">
         <h2 className={`font-oswald text-center text-6xl text-black `}>
           About Me
