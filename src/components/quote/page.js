@@ -1,45 +1,33 @@
 "use client"
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import Work from "../work/page";
-import { motion, useScroll, useTransform } from "framer-motion";
+import Button from "../button/page";
+import { motion} from "framer-motion";
+import Link from "next/link";
 
 const MiniAbout = () => {
 
-  const container = useRef();
-
-  const {scrollYProgress} = useScroll({
-    target: container,
-    offset: ['start start', 'end end']
-  })
-const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9])
-const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
     
         const splitText = new SplitType(".quote", { types: "words, chars" });
-    
-        // GSAP Animation for the split text
         gsap.fromTo(
           splitText.chars,
-          {
-            opacity: 0.2,
-           y: 50,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            stagger: 0.05, 
-            ease: "power4.out",
+          { opacity: 0, },
+          {opacity: 1, 
+            duration: 0.4,
+            delay: 0.3,
+             stagger: 0.05, 
+            ease: "power1.out",
             scrollTrigger: {
               trigger: ".quote", 
               start: "top bottom",
-              end: "top 50%", 
-              scrub: false, 
+              end: "top 55%", 
+              scrub: true, 
+              
             },
           }
         );
@@ -48,26 +36,40 @@ const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
       }, []);
 
 
-
     
     return (
          <>
-         <div ref={container} className="relative h-[200vh]">
+         
          <motion.main
-         style={{scale, rotate}}
-          className="sticky top-0 overflow-x-hidden bg-black text-white text-center h-[120vh] w-full ">
-            <section >
-          <h1 className="text-6xl px-3 pt-24">
-          I help brands, businesses, and organizations bring their ideas to life through clean,
-           responsive, and user-focused websites. My goal is to create digital experiences that
-            are not only visually appealing but also intuitive and accessible—so users can easily engage, 
-          navigate, and connect with what you offer.
+        
+          className=" text-second text-center  py-14 bg-primary px-16 sm:px-3 sm:h-[70%] md:px-3 lg:px-16">
+            <section className="flex sm:flex-col items-center justify-center  gap-1" >
+          <h1 className="text-3xl px-3 sm:px-0  quote text-left font-oswald">
+          Helping brands, businesses, and organizations build clean, responsive, 
+          and user-focused websites. I create digital experiences that are not just
+           visually appealing but also easy to use, helping you connect better with
+            your audience and grow your impact online.
+
           </h1>
+          <div className="flex flex-col items-end gap-8">
+          <p className="text-sm sm:text-base font-open text-left">
+          From building smooth, high-performing interfaces to ensuring your website is fast,
+          accessible, and mobile-friendly.
+ I bring both creativity and technical skill to every project.
+  Whether you’re launching something new or refreshing your existing site,
+ I’m here to help you make a strong and lasting impression.
+Let’s work together to turn your ideas into powerful online experiences that users love.
+  </p>
+  <Button>
+            <Link href='/about' className="text-2xl transition-colors duration-500 ease-linear z-50">
+            <p>About me</p>
+            </Link>
+          </Button>
+          </div>
 
             </section>
          </motion.main>
-         <Work scrollYProgress={scrollYProgress} />
-         </div>
+       
        
     </> );
 }

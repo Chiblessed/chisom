@@ -1,192 +1,101 @@
 "use client"
-import {React, useRef, useEffect} from 'react';
-import styles from './styles.module.scss'
+
+import React, { useRef, useEffect } from 'react';
+import styles from './styles.module.scss';
 import { motion, useTransform } from "framer-motion";
 import Image2 from '../../../public/image0 (3).jpeg';
 import Image1 from '../../../public/Screenshot (24).jpg';
 import Image3 from '../../../public/image0.jpeg';
 import Image4 from '../../../public/Screenshot (26).jpg';
 import Image from 'next/image';
-import emailjs from '@emailjs/browser';
 import gsap from 'gsap';
 import Link from 'next/link';
+import WorkButton from '../workbtn/page';
 
-export default function Work({scrollYProgress}) {
+export default function Work() {
 
-  const form = useRef();
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-  const serviceId = process.env.NEXT_SERVICE_ID;
-  const templateId = process.env.NEXT_TEMPLATE_ID;
+  useEffect(() => {
+    const hoverBodies = document.querySelectorAll('.hover-body');
 
-  
-  const sendEmail = (e) => {
-    e.preventDefault();
+    hoverBodies.forEach((body) => {
+      const hoverImg = body.querySelector('.hover-img');
+      const hiddenImg = body.querySelector('.hidden-img');
 
-    emailjs
-      .sendForm(serviceId, templateId, form.current, {
-        publicKey: apiKey,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          
-          e.target.reset()
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+      body.addEventListener('mousemove', (e) => {
+        hoverImg.style.opacity = 1;
+        hoverImg.style.transform = 'translate(-100%, -50%) rotate(5deg)';
+        hiddenImg.style.transform = 'scale(1,1)';
+        if(e.clientX + 'px' === '1500px')
+        {
+          hoverImg.style.left = e.clientX + 'px'
+        } 
+      });
 
-
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1])
-const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0])
+      body.addEventListener('mouseleave', (e) => {
+        hoverImg.style.opacity = 0;
+        hoverImg.style.transform = 'translate(-50%, -50%)';
+        hiddenImg.style.transform = 'scale(0.5, 0.5)';
+      });
+    });
+  }, []);
 
   return (
-    <>
-    <motion.main 
-    style={{scale, rotate}}
-    className={`${styles.bgbody} relative rounded-2xl`} >
-    <section className=' h-[510vh] sm:h-[400vh] md:h-[430vh] lg:h-[500vh]'>
-<h2 className={`${styles.head3} text-center text-6xl text-black pt-20`}>
-  Projects 
-</h2>
-<div className='flex flex-col items-center justify-center gap-14 pt-10 mt-12 pb-52'>
-  <div className='bg-white text-white rounded-[12px] shadow-custom-glow flex flex-col items-center justify-center sticky top-10  z-0 w-[70vw] sm:w-[100vw] sm:top-10'>
-    <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>Chess-In Slum</h2>
-    <Image src={Image1} alt='chess-in-slum image' width={800} height={200} />
-    <div className='flex items-center justify-center gap-10 pt-5  sm:gap-2'>
-    <button className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
-    </div>
-   <div  className={`${styles.mintext} mt-5`}>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" > 
-      <Link href='https://chiblessed.github.io/ChessInSlum/'>
-      Site
+    <main className='bg-primary h-full px-16 sm:px-3 md:px-7 overflow-hidden lg:px-16'>
+      <section>
+        <h2 className="text-second font-oswald text-[10rem] sm:text-[5rem] uppercase">
+          Selected Works
+        </h2>
+
+        {[{
+          title: 'African Business Radio',
+          img: Image3,
+           live: 'https://african-business-radio-dun.vercel.app/',
+  github: 'https://github.com/Chiblessed/business-radio'
+        }, {
+          title: 'Selhono',
+          img: Image2,
+           live: 'https://selhono-interior.netlify.app/',
+  github: 'https://github.com/Chiblessed/selhono'
+        }, {
+          title: 'FinPulse',
+          img: Image4,
+           live: 'https://chiblessed.github.io/Finpulse/',
+  github: 'https://github.com/Chiblessed/Finpulse'
+        }, {
+          title: 'Chess In Slum',
+          img: Image1,
+           live: 'https://chiblessed.github.io/ChessInSlum/',
+  github: 'https://github.com/Chiblessed/ChessInSlum'
+        }].map(({ title, img, live, github }, i) => (
+          <div key={i} className="hover-body overflow-hidden border-t border-t-third w-full flex items-center justify-between py-6 cursor-pointer">
+            <p className="text-2xl sm:text-xl text-second">{title}</p>
+            <div className="hover-img sm:hidden absolute w-[550px] h-[250px] left-1/2 translate-x-[-50%] translate-y-[50%] transition-all duration-500 ease-out cursor-none opacity-0">
+            <Image src={img} width={300} height={200} alt={title} className="hidden-img w-full h-full object-cover relative" />
+            </div>
+            <div className='flex items-center justify-center gap-3'>
+            <Link href={live} target="_blank">
+        <WorkButton>
+          <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">Live</p>
+        </WorkButton>
       </Link>
-      </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href='https://github.com/Chiblessed/ChessInSlum'>
-      Github
+      <Link href={github} target="_blank">
+        <WorkButton>
+          <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">Github</p>
+        </WorkButton>
       </Link>
-      </button>
-   </div>
-
-  </div>
-  <div className=' bg-white text-white rounded-[12px] shadow-custom-glow flex flex-col items-center justify-center sticky top-14  z-0  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>Selhono</h2>
-  <Image src={Image2} alt='selhono img' width={800} height={200} />
-    <div className='flex items-center justify-center gap-10 pt-5 sm:flex-col'>
-    <div className='flex items-center justify-center gap-10 '>
-    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Nuxt</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
-      </div>
-      <div className='flex items-center justify-center gap-10 '>
-      <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>GSAP</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
-</div>
-  </div>
-   <div  className={`${styles.mintext} mt-5`}>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://selhono-interior.netlify.app/">
-      Site
-      </Link>
-      </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://github.com/Chiblessed/selhono">
-      Github
-      </Link>
-    </button>
-   </div>
-
-  </div>
-  <div className='bg-white rounded-[12px] text-white shadow-custom-glow flex flex-col items-center justify-center sticky top-20  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} pt-5 pb-5 text-3xl text-black`}>African Business Radio</h2>
-  <Image src={Image3} alt='chess-in-slum image' width={800} height={200} />
-    <div className='flex items-center justify-center gap-10 pt-5 sm:flex-col'>
-    <div className='flex items-center justify-center gap-10'>
-    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Next.js</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
-</div>
-<div className='flex items-center justify-center gap-10'>
-<button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Restful API</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React Query</button>
-   
-</div>
-    </div>
-   <div  className={`${styles.mintext} mt-5`}>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://african-business-radio-dun.vercel.app/">
-      Site
-      </Link>
-    </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://github.com/Chiblessed/business-radio">
-      Github
-      </Link>
-    </button>
-   </div>
-
-  </div>
-  <div className='bg-white rounded-[12px] text-white shadow-custom-glow flex flex-col items-center justify-center sticky top-10  z-40  w-[70vw] sm:w-[100vw]'>
-  <h2 className={`${styles.head3} text-black pt-5 pb-5 text-3xl`}>Finpulse</h2>
-  <Image src={Image4} alt='chess-in-slum image' width={800} height={200} />
-    <div className='flex items-center justify-center gap-4 pt-5 sm:flex-col'>
-    <div className='flex items-center justify-center gap-4'>
-    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>React</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Tailwind CSS</button>
-    </div>
-    <div className='flex items-center justify-center gap-4'>
-    <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>Framer Motion</button>
-   <button  className={`${styles.mintext} bg-black/20 px-4 py-2 rounded-[15px] shadow-dark-500`}>JavaScript</button>
-</div>
-   </div>
-   <div  className={`${styles.mintext} mt-5`}>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://chiblessed.github.io/Finpulse/">
-      Site
-      </Link>
-    </button>
-    <button  className="bg-black px-6 py-2 rounded-[20px] hover:bg-transparent hover:border-2 hover:border-solid hover:border-black shadow-dark-500 mr-5 mb-10 mt-3" >
-      <Link href="https://github.com/Chiblessed/Finpulse">
-      Github
-      </Link>
-    </button>
-   </div>
-
-  </div>
-  <button  className={`${styles.mintext} bg-black relative top-20 z-40  px-4 py-2 rounded-[15px] shadow-dark-500 text-white hover:bg-transparent hover:border-2 hover:border-solid hover:border-black hover:textblack`}>
-    <Link href='/works'> More Projects</Link>
-  </button>
-</div>
-
-    </section>
-    </motion.main>
-<footer className={`${styles.footerbg} rounded-2xl bg-black h-[100vh] sm:h-[120vh] md:h-[70vh] lg:h-[100vh] text-white flex flex-col items-center justify-center`}>
-<div className=" relative py-8 overflow-hidden flex w-full gap-5 whitespace-nowrap">
-<h2 className={`${styles.head3} text-center text-6xl text-white max-sm:text-4xl max-sm:py-7 `}>Let's Work Together</h2>
-
-
-
-</div>
-<form ref={form} onSubmit={sendEmail} className="flex flex-col items-center justify-center">
-  <div className="flex items-center justify-center gap-5 mb-4 sm:flex-col">
-  <label className={`${styles.mintext} text-3xl mb-2`}>Name:</label>
-      <input type="text" name="from_name" className="text-black font-fontPrim text-xl w-[25rem] sm:w-[20rem] px-3 focus:outline-none py-2 rounded-[12px]" required/>
-  </div>
-  <div className="flex items-center justify-center gap-5 mb-4 sm:flex-col">
-  <label className={`${styles.mintext} text-3xl mb-2`}>Email:</label>
-  <input type="email" name="from_email" className="text-black font-fontPrim text-xl w-[25rem]  sm:w-[20rem] px-3 focus:outline-none py-2 rounded-[12px]" required/>
-  </div>
-  <div className="flex items-center justify-center gap-4 sm:flex-col">
-  <label className={`${styles.mintext} text-3xl mb-2`}>Message:</label>
-  <textarea name="message" className="text-black font-fontPrim text-xl w-[25rem]  sm:w-[20rem] h-32 px-3 focus:outline-none py-2 rounded-[12px] resize-none"  required/>
-  </div>
-   <input type="submit" value="Send" className={`${styles.mintext} bg-white mt-10 text-black font-fontPrim text-xl cursor-pointer px-5  focus:outline-none py-2 rounded-[12px]`} />
-
-    </form>
-</footer>
-    </>
+            </div>
+          </div>
+        ))}
+        <div className='w-44 h-20 mx-auto mt-5'>
+          <Link href='/works'>
+          <WorkButton>
+          <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">More Work</p>
+        </WorkButton>
+          </Link>
+       
+        </div>
+    
+      </section>
+    </main>
   )
 }

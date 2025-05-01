@@ -1,115 +1,68 @@
 "use client";
-import { useRef,useEffect } from "react";
-import styles from './style.module.scss'; 
-import ShaderBackground from "../../components/shader";
-import MiniAbout from "../../components/quote/page";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 import Link from "next/link";
-import Head from "next/head";
-
+import Image from "next/image";
+import Mainimage from '@/../../public/mian.png';
+import InfiniteScroll from '@/../../src/components/scroll/page';
+import MiniAbout from '../../components/quote/page'; 
+import Work from "@/components/work/page";
+import Footer from "@/components/footer/page";
 
 
 
 const Hero = () => {
-  const ref = useRef()
-  const container = useRef()
+  const contactRef = useRef(null)
 
-const {scrollYProgress} = useScroll({
-  target: ref,
-  offset: ['start start', 'end start']
-})
-
-
-const textY = useTransform(scrollYProgress, [0, 1], ['0%', '-100%'])
-
+  const handleHireClick = () => {
+    const link = document.createElement('a')
+    link.href = '/maincv.pdf'
+    link.download = 'Chisom_CV.pdf'
+    link.click()
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 useEffect(() => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const splitText = new SplitType(".quote", { types: "words, chars" });
-  // GSAP Animation for the split text
-  gsap.fromTo(
-    splitText.chars,
-    {
-      opacity: 0.2,
-    },
-    {
-      opacity: 1,
-      //y: -50,
-      duration: 1,
-      stagger: 0.05, 
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: ".quote", 
-        start: "top 80%", 
-        end: "top 20%", 
-        scrub: true, 
-        markers: false
-      },
+  gsap.from('h2', {
+    y:50,
+    opacity: 0,
+    ease: 'power4.inOut',
+    delay:0.2,
+    stagger: {
+      amount: 0.3
     }
-  );
-
-  
-}, []);
-
-      //<a download="maincv.pdf">Download CV</a>
-  
-      
-
+  })
+},[])
   return (
-    <>
-    <Head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                    <link
-            href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
-            rel="stylesheet"
-          />
-    </Head>
-    <div>
-      <div ref={ref} >
+    <>   
+    <main className="h-screen sm:h-[60%] md:h-1/2 bg-primary overflow-hidden sm:px-3">
+      <section className="pt-10 flex flex-col items-center justify-center">
+        <div className="flex items-center justify-center gap-3 group  hover:cursor-pointer">
+        <p className="text-lg">
+          Creative Developer
+        </p>
+        <div className="w-2 h-2 rounded-full bg-second" />
+        <button 
+        onClick={handleHireClick}
+        className="group-hover:bg-second group-hover:text-primary group-hover:px-3 group-hover:py-2 rounded-lg">
+        Hire Me
+        </button>
        
-        <ShaderBackground  />
-      <motion.main
-      initial= {{opacity: 0,
-        rotate: -360,
-scale:0
-      }}
-      animate = {{
-        opacity: 1,
-        scale: 1,
-        transition: {duration: 2}
-      }}
-      style={{y: textY}} 
-      className="relative min-h-screen flex flex-col items-center justify-center text-black">
-        <h1  className={`${styles.heading} text-8xl text-center font-semibold sm:text-6xl`}>Ohanu Chisom Blessing</h1>
-        <p className={`${styles.heading2} text-2xl pt-5 max-sm:text-center`}> A Frontend Developer based in Lagos, Nigeria.</p>
-        
-        <div className="flex items-center gap-5 mt-5">
-            <button className={`${styles.heading2} border-2 border-solid border-black bg-black text-white text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
-            <Link href="/maincv.pdf"  passHref>
-            <a download="maincv.pdf">Download CV</a>
-
-
-            </Link>
-            </button>
-            <button className={`${styles.heading2} border-2 border-solid border-black  text-black text-[16px] font-fontPrim rounded-[15px] font-medium px-5 py-2`}>
-              <Link href='/about'>
-              Get to Know me
-              </Link>
-            </button>
-
         </div>
-      </motion.main>
-    </div>
-   <MiniAbout />
-    
-
-    </div>
-  
- 
+     
+        <h2 className="text-9xl sm:text-[45px] md:text-[85px] sm:py-3 text-center font-oswald whitespace-nowrap">
+          Ohanu Chisom Blessing
+        </h2>
+       
+        <Image src={Mainimage} width={500} height={500} alt="banner" className="rounded-3xl md:mb-10 sm:mb-10" />
+      
+        
+      
+      </section>
+    </main>
+    <InfiniteScroll />
+    <MiniAbout />
+    <Work />
+    <Footer contactRef={contactRef} />
     </>
     
   );

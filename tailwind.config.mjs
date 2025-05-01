@@ -10,11 +10,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#fefae0',
+        second: '#162114',
+        third: '#294122'
       },
       boxShadow: {
         'custom-glow': '0 0 10px rgba(51, 51, 53, 0.39), 0 0 20px rgba(51, 51, 53, 0.3)',
+      },
+      fontFamily:{
+        oswald: ['Oswald', 'sans-serif'],
+        open: ['Open Sans', 'sans-serif']
       },
       animation: {
         loop: 'looptext 14s linear infinite'

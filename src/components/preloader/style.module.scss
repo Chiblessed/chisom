@@ -6,19 +6,25 @@
     justify-content: center;
     position: fixed;
     z-index: 99;
-    background-color: #141516;
+    background-color: #162114;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    
+      scrollbar-width: none;
+          -ms-overflow-style: none;
     svg{
         position: absolute;
         top: 0;
         width: 100%;
         height: calc(100% + 300px);
         path{
-            fill: #141516;
+            fill: #162114;
         }
     }
     p{
         display: flex;
-        color: white;
+        color: #fefae0;
         font-size: 42px;
         align-items: center;
         position: absolute;
@@ -27,7 +33,7 @@
             display: block;
             width: 10px;
             height: 10px;
-            background-color: white;
+            background-color: #fefae0;
             border-radius: 50%;
             margin-right: 10px;
         }
