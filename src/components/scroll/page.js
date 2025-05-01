@@ -38,7 +38,7 @@ const InfiniteScroll = () => {
     <main>
       <section
        className="bg-second font-open flex py-[1vw] overflow-hidden">
-        <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw]">
+        <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw] translate-x-[200%]">
              <p  className="text-primary text-4xl">Frontend Developer</p>
              <div className="w-10 h-10">
              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
