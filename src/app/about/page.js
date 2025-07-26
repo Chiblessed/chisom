@@ -30,7 +30,7 @@ const About = () => {
 
   return (
     <main className="bg-primary -z-10 h-full">
-      <section className="h-screen">
+      <section className="h-screen sm:h-full">
         <h2 className="font-oswald text-center text-6xl text-black">
           About Me
         </h2>
