@@ -28,6 +28,14 @@ export default function RootLayout({ children }) {
     return () => gsap.ticker.remove(update);
   }, []);
 
+  const metadata = {
+    title: "Chisom Ohanu Portfolio",
+    description: "Chisom Ohanu Portfolio",
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
+
   return (
     <html lang="en">
       <body className={`${open.className} ${oswald.className} antialiased`}>

@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Image6 from "../../../public/image0.jpeg";
 import Image2 from "../../../public/Screenshot (25).jpg";
 import Image1 from "../../../public/Screenshot (35).png";
-import Image3 from "../../../public/Screenshot (30) (1).jpg";
+import Image3 from "../../../public/beltelcake.png";
 import Image4 from "../../../public/afrika.png";
 import Image5 from "../../../public/image0 (3).jpeg";
 import Link from "next/link";
@@ -166,6 +166,62 @@ const Work = () => {
                 </WorkButton>
               </Link>
               <Link href="https://github.com/Chiblessed/jacob">
+                <WorkButton>
+                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                    Github
+                  </p>
+                </WorkButton>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between sm:flex-col  md:flex-col border-t border-t-second py-5">
+            <div className="flex items-start justify-center sm:flex-col gap-3">
+              <Image src={Image3} width={500} height={500} alt="project1" />
+              <div className="flex flex-col">
+                <h1 className="text-second font-oswald text-3xl uppercase">
+                  Beltel Cakes and more
+                </h1>
+                <p className="text-sm py-5 w-[70%] sm:w-full md:w-full font-open">
+                  This website blends elegance and warmth through a clean,
+                  inviting design that reflects Beltel Cakes & More’s passion
+                  for celebration. Soft tones, graceful transitions, and
+                  thoughtful spacing highlight each cake and gift box as a
+                  centerpiece of joy. Every detail,from layout to imagery,
+                  evokes a sense of delight and indulgence, mirroring the
+                  brand’s dedication to making every moment feel special.
+                </p>
+                <ul className="flex gap-3 sm:gap-1 sm:mb-3 font-open">
+                  <li className="bg-second text-primary text-sm px-3 py-2 rounded-sm cursor-pointer">
+                    Next.js
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Tailwindcss
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    GSAP
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Context API
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Firebase
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Paystack
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 md:mt-3">
+              <Link href="https://beltelcake.vercel.app/">
+                <WorkButton>
+                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                    Live
+                  </p>
+                </WorkButton>
+              </Link>
+              <Link href="https://github.com/Chiblessed/beltelcake">
                 <WorkButton>
                   <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
                     Github
