@@ -329,14 +329,14 @@ const Work = () => {
               </div>
             </div>
             <div className="flex items-center justify-center gap-3 md:mt-3">
-              <Link href="https://selhono-interior.netlify.app/">
+              <Link href="https://ventureverse-three.vercel.app/">
                 <WorkButton>
                   <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
                     Live
                   </p>
                 </WorkButton>
               </Link>
-              <Link href="https://github.com/Chiblessed/selhono">
+              <Link href="https://github.com/Chiblessed/ventureverse">
                 <WorkButton>
                   <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
                     Github
