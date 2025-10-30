@@ -7,6 +7,8 @@ import Image2 from "../../../public/Screenshot (25).jpg";
 import Image1 from "../../../public/Screenshot (35).png";
 import Image3 from "../../../public/beltelcake.png";
 import Image4 from "../../../public/afrika.png";
+import Image8 from "../../../public/cloudhub.png";
+import Image9 from "../../../public/branddesigner.png";
 import Image5 from "../../../public/image0 (3).jpeg";
 import Image7 from "../../../public/venture.png";
 import Link from "next/link";
@@ -122,6 +124,115 @@ const Work = () => {
                 </WorkButton>
               </Link>
               <Link href="https://github.com/Chiblessed/selhono">
+                <WorkButton>
+                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                    Github
+                  </p>
+                </WorkButton>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between sm:flex-col md:flex-col border-t border-t-second py-5">
+            <div className="flex items-start justify-center sm:flex-col gap-3">
+              <Image src={Image8} width={500} height={500} alt="project1" />
+              <div className="flex flex-col">
+                <h1 className="text-second font-oswald text-3xl uppercase">
+                  CloudHub
+                </h1>
+                <p className="text-sm py-5 w-[70%] sm:w-full md:w-full font-open">
+                  This platform blends intelligence, precision, and
+                  collaboration through a clean, dynamic interface that captures
+                  Cloudhub’s essence of digital innovation. Smooth transitions,
+                  reactive visuals, and data-driven motion create an experience
+                  that feels alive — where technology becomes both tool and
+                  teammate. From creating and inspecting synthetic surveillance
+                  models to securely sharing progress, every interaction feels
+                  deliberate and intelligent. Built with Next.js, TailwindCSS,
+                  and GSAP, Cloudhub redefines how teams visualize, refine, and
+                  deploy ideas — connecting creativity with code in a seamless,
+                  secure, and scalable environment.
+                </p>
+                <ul className="flex sm:grid sm:grid-cols-3 gap-3 sm:gap-1 sm:mb-3 font-open">
+                  <li className="bg-second text-primary text-sm px-3 py-2 rounded-sm cursor-pointer">
+                    Next.js
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Tailwindcss
+                  </li>
+
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Landing Page
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    GSAP
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 md:mt-3">
+              <Link href="https://landingpages-drab.vercel.app/">
+                <WorkButton>
+                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                    Live
+                  </p>
+                </WorkButton>
+              </Link>
+              <Link href="https://github.com/Chiblessed/landingpages">
+                <WorkButton>
+                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                    Github
+                  </p>
+                </WorkButton>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between sm:flex-col md:flex-col border-t border-t-second py-5">
+            <div className="flex items-start justify-center sm:flex-col gap-3">
+              <Image src={Image9} width={500} height={500} alt="project1" />
+              <div className="flex flex-col">
+                <h1 className="text-second font-oswald text-3xl uppercase">
+                  Finn portfolio
+                </h1>
+                <p className="text-sm py-5 w-[70%] sm:w-full md:w-full font-open">
+                  This platform merges design intuition, strategy, and motion to
+                  express Finn’s artistry — a Lagos-based brand designer shaping
+                  visual stories that connect and convert. Fluid transitions,
+                  vibrant color layers, and playful animations reveal a world
+                  where creativity meets clarity. From crafting bold identities
+                  to curating social media experiences that move audiences,
+                  every frame feels deliberate and human. Built with Next.js,
+                  TailwindCSS, and GSAP, Finn’s digital space embodies the
+                  spirit of modern storytelling — seamless, expressive, and made
+                  to inspire brands that dare to stand out.
+                </p>
+                <ul className="flex sm:grid sm:grid-cols-3 gap-3 sm:gap-1 sm:mb-3 font-open">
+                  <li className="bg-second text-primary text-sm px-3 py-2 rounded-sm cursor-pointer">
+                    Next.js
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Tailwindcss
+                  </li>
+
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    Landing Page
+                  </li>
+                  <li className="bg-second text-primary text-sm px-3 py-2 cursor-pointer rounded-sm">
+                    GSAP
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 md:mt-3">
+              <Link href="https://landingpages-drab.vercel.app/">
+                <WorkButton>
+                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                    Live
+                  </p>
+                </WorkButton>
+              </Link>
+              <Link href="https://github.com/Chiblessed/landingpages">
                 <WorkButton>
                   <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
                     Github
