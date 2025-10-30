@@ -26,7 +26,7 @@ const Work = () => {
     <>
       <main className="bg-primary h-full px-16 sm:px-3 md:px-3 lg:px-16">
         <section className="flex flex-col">
-          <h2 className="text-second font-oswald text-[10rem] leading-[8rem] pb-3  sm:text-[4rem] sm:leading-[5rem] uppercase">
+          <h2 className="text-second font-oswald text-[10rem] leading-[8rem] pb-8  sm:text-[4rem] sm:leading-[5rem] uppercase">
             Selected Works
           </h2>
           <div className="flex items-center justify-between sm:flex-col md:flex-col border-t border-t-second py-5 ">
