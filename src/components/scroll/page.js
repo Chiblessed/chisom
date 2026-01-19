@@ -1,100 +1,57 @@
 "use client";
-import { useEffect } from "react";
-import Image from "next/image";
-import Image1 from "@/../../public/second.png";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import Flower from "@/../../public/flower.svg";
 
 const InfiniteScroll = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  const marqueeRef = useRef(null);
 
-    gsap.fromTo(
-      ".marquee",
-      {
-        transform: "translateX(-100%)",
-        duration: 0.5,
-        delay: 0.2,
+  useEffect(() => {
+    if (!marqueeRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(".marquee-track", {
+        xPercent: -50,
         repeat: -1,
-        ease: "none",
-      },
-      {
-        transform: "translateX(0%)",
-        delay: 0.5,
-        duration: 4,
-        repeat: -1,
-        ease: "none",
-      }
-    );
+        duration: 20,
+        ease: "linear",
+      });
+    }, marqueeRef);
+
+    return () => ctx.revert();
   }, []);
 
+  // Items to display in the marquee
+  const items = Array(6).fill(
+    <div className="flex items-center gap-[1rem] whitespace-nowrap">
+      <p className="text-primary text-4xl">Frontend Developer</p>
+      <div className="w-10 h-10 ml-5">
+        <Image src={Flower} width={200} height={200} alt="Flower" />
+      </div>
+      <p className="text-primary text-4xl">UI/UX</p>
+      <div className="w-10 h-10 ml-5">
+        <Image src={Flower} width={200} height={200} alt="Flower" />
+      </div>
+      <p className="text-primary text-4xl">Product Designer</p>
+      <div className="w-10 h-10 ml-5">
+        <Image src={Flower} width={200} height={200} alt="Flower" />
+      </div>
+    </div>
+  );
+
   return (
-    <>
-      <main>
-        <section className="bg-second font-open flex py-[1vw] overflow-hidden">
-          <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw] translate-x-[200%]">
-            <p className="text-primary text-4xl">Frontend Developer</p>
-            <div className="w-10 h-10">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <path
-                  style={{ fill: "#fefae0" }}
-                  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                  data-name="Right"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw]">
-            <p className="text-primary text-4xl">Frontend Developer</p>
-            <div className="w-10 h-10">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <path
-                  style={{ fill: "#fefae0" }}
-                  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                  data-name="Right"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw]">
-            <p className="text-primary text-4xl">Frontend Developer</p>
-            <div className="w-10 h-10">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <path
-                  style={{ fill: "#fefae0" }}
-                  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                  data-name="Right"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw]">
-            <p className="text-primary text-4xl">Frontend Developer</p>
-            <div className="w-10 h-10">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <path
-                  style={{ fill: "#fefae0" }}
-                  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                  data-name="Right"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className=" marquee flex flex-shrink-0 items-center gap-[3vw] px-[1.5vw]">
-            <p className="text-primary text-4xl">Frontend Developer</p>
-            <div className="w-10 h-10">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <path
-                  style={{ fill: "#fefae0" }}
-                  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                  data-name="Right"
-                />
-              </svg>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+    <section ref={marqueeRef} className="overflow-hidden w-full bg-third py-4">
+      <div className="marquee-track flex gap-[3vw] px-[1.5vw]">
+        {items.map((item, index) => (
+          <div key={index}>{item}</div>
+        ))}
+        {/* Duplicate items to make seamless infinite scroll */}
+        {items.map((item, index) => (
+          <div key={`dup-${index}`}>{item}</div>
+        ))}
+      </div>
+    </section>
   );
 };
 

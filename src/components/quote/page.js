@@ -6,6 +6,8 @@ import SplitType from "split-type";
 import Button from "../button/page";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import MainImage from "@/../../public/Chisom image.png";
 
 const MiniAbout = () => {
   useEffect(() => {
@@ -53,28 +55,51 @@ const MiniAbout = () => {
 
   return (
     <>
-      <motion.main className=" text-second text-center  py-14 bg-primary px-16 sm:px-3 sm:h-[70%] md:px-3 lg:px-16">
-        <section className="flex sm:flex-col items-center justify-center  gap-1">
-          <h1 className="text-3xl px-3 sm:px-0  quote text-left font-oswald">
-            Helping brands, businesses, and organizations build clean,
-            responsive, and user-focused websites. I create digital experiences
-            that are not just visually appealing but also easy to use, helping
-            you connect better with your audience and grow your impact online.
-          </h1>
-          <div className="flex flex-col items-end gap-8">
-            <p className="text-sm sm:text-base font-open text-left about">
-              From building smooth, high-performing interfaces to ensuring your
-              website is fast, accessible, and mobile-friendly. I bring both
-              creativity and technical skill to every project. Whether you’re
-              launching something new or refreshing your existing site, I’m here
-              to help you make a strong and lasting impression. Let’s work
-              together to turn your ideas into powerful online experiences that
-              users love.
+      <motion.main className="bg-primary text-third text-center px-20 sm:px-3 font-karla py-14">
+        <section className="flex sm:flex-col items-start justify-between  gap-[6vw]">
+          <div className="w-[500px] h-1/2 sm:w-[350px] overflow-hidden rounded-2xl">
+            <Image
+              src={MainImage}
+              alt=""
+              width={1500}
+              height={1500}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="flex flex-col items-start max-w-2xl gap-8">
+            <h2 className="font-titan text-base">(ABOUT ME)</h2>
+            <p className="text-base quote text-left ">
+              I started as a frontend developer, but along the way, I became
+              more curious about why users interact with products the way they
+              do, not just how to build them. That curiosity naturally led me
+              into product design. Today, I focus on designing and building
+              user-centered digital experiences that help startups,
+              organizations, and professionals communicate clearly and serve
+              their users better. I approach every project by first
+              understanding the problem, the users, and the context, then
+              designing solutions that feel intuitive, accessible, and
+              intentional. My work sits at the intersection of design and
+              engineering. I translate ideas and requirements into wireframes,
+              user flows, and high-fidelity interfaces, then bring them to life
+              with clean, responsive frontend code.
+            </p>
+            <p className="text-base sm:text-base  text-left quote">
+              This allows me to design products that are not only visually
+              engaging but also practical, accessible, and scalable. I believe
+              good design is about clarity and ease. Every design decision
+              should guide users naturally, reduce friction, and support
+              meaningful outcomes. Whether I’m designing a new product,
+              improving usability, or refining an existing experience, my goal
+              is to create digital products that work, simply and effectively. I
+              enjoy collaborating with teams that value thoughtful design,
+              attention to detail, and impact-driven solutions. Let’s build
+              digital experiences that users understand, trust, and enjoy.
             </p>
             <Button>
               <Link
                 href="/about"
-                className="text-2xl transition-colors duration-500 ease-linear z-50"
+                className="flex items-center justify-around gap-2  text-lg transition-colors duration-500 ease-linear px-6 py-4 z-50"
               >
                 <p>About me</p>
               </Link>

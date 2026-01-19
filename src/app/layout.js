@@ -6,13 +6,15 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import Navbar from "@/components/navbar/page";
 import "./globals.css";
-import { Oswald, Open_Sans } from "next/font/google";
+import { Titan_One, Open_Sans, Lexend } from "next/font/google";
 
-const open = Open_Sans({
+const karla = Lexend({
   subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
-const oswald = Oswald({
+const titan = Titan_One({
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export default function RootLayout({ children }) {
@@ -38,7 +40,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${open.className} ${oswald.className} antialiased`}>
+      <body className={`${karla.className} ${titan.className} antialiased`}>
         <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
           <Navbar />
           {children}

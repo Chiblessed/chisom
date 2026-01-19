@@ -1,111 +1,149 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
-import styles from "./styles.module.scss";
-import { motion, useTransform } from "framer-motion";
-import Image2 from "../../../public/image0 (3).jpeg";
+import React, { useEffect, useRef } from "react";
 import Image1 from "../../../public/Screenshot (35).png";
+import Image2 from "../../../public/image0 (3).jpeg";
 import Image3 from "../../../public/image0.jpeg";
 import Image4 from "../../../public/afrika.png";
 import Image from "next/image";
-import gsap from "gsap";
 import Link from "next/link";
+import gsap from "gsap";
 import WorkButton from "../workbtn/page";
 
 export default function Work() {
+  const itemsRef = useRef([]);
+
   useEffect(() => {
-    const hoverBodies = document.querySelectorAll(".hover-body");
+    // Add hover animations using GSAP
+    itemsRef.current.forEach((item) => {
+      const img = item.querySelector("img");
 
-    hoverBodies.forEach((body) => {
-      const hoverImg = body.querySelector(".hover-img");
-      const hiddenImg = body.querySelector(".hidden-img");
+      if (!img) return;
 
-      body.addEventListener("mousemove", (e) => {
-        hoverImg.style.opacity = 1;
-        hoverImg.style.transform = "translate(-100%, -50%) rotate(5deg)";
-        hiddenImg.style.transform = "scale(1,1)";
-        if (e.clientX + "px" === "1500px") {
-          hoverImg.style.left = e.clientX + "px";
-        }
-      });
+      const tl = gsap.timeline({ paused: true });
 
-      body.addEventListener("mouseleave", (e) => {
-        hoverImg.style.opacity = 0;
-        hoverImg.style.transform = "translate(-50%, -50%)";
-        hiddenImg.style.transform = "scale(0.5, 0.5)";
-      });
+      tl.to(img, { scale: 1.05, duration: 0.4, ease: "power1.out" });
+
+      item.addEventListener("mouseenter", () => tl.play());
+      item.addEventListener("mouseleave", () => tl.reverse());
     });
   }, []);
+
+  const works = [
+    {
+      title: "African Business Radio",
+      description:
+        "African Business Radio is a podcast platform offering diverse channels across Kids & Parenting, Religion, Sports, and Technology. With smart filtering and sorting, users can easily discover and enjoy content that informs, inspires, and connects with the African experience.",
+      category: "Frontend Development",
+      img: Image3,
+      live: "https://african-business-radio-dun.vercel.app/",
+      github: "https://github.com/Chiblessed/business-radio",
+    },
+    {
+      title: "Selhono",
+      description:
+        " Selhono is an interior design platform that showcases elegant design projects and offers tailored services. From concept to completion, users can explore Selhono’s portfolio and discover how beauty meets functionality in every space.",
+      category: ["Frontend Development"],
+      img: Image2,
+      live: "https://selhono-interior.netlify.app/",
+      github: "https://github.com/Chiblessed/selhono",
+    },
+    {
+      title: "Afrika",
+      description:
+        "  Afrika is an e-commerce platform that addresses key challenges in African markets. It empowers rural African fashion designers by connecting them directly with potential customers, helping to showcase and spread the rich cultural heritage of Africa through authentic fashion.",
+      category: ["Frontend Development", "E-commerce Site"],
+      img: Image4,
+      live: "https://afri-tawny.vercel.app/",
+      github: "https://github.com/Chiblessed/afri",
+    },
+    {
+      title: "Jacob Grønberg",
+      description:
+        "This portfolio breaks convention with a minimalist yet striking design, mirroring the photographer's signature style. Seamless animations and intentional whitespace let each image command attention, while the unconventional layout reflects a modern editorail eye.",
+      category: ["Frontend Development", "Portfolio"],
+      img: Image1,
+      live: "https://jacob-peach.vercel.app/",
+      github: "https://github.com/Chiblessed/jacob",
+    },
+  ];
 
   return (
     <main className="bg-primary h-full px-16 sm:px-3 md:px-7 overflow-hidden lg:px-16">
       <section>
-        <h2 className="text-second font-oswald text-[10rem] leading-[8rem] sm:text-[5rem] uppercase">
-          Selected Works
+        <h2 className="text-third font-titan pb-6 text-[10rem] sm:leading-[4rem] leading-[8rem] sm:text-[5rem] uppercase">
+          Recent Works
         </h2>
 
-        {[
-          {
-            title: "African Business Radio",
-            img: Image3,
-            live: "https://african-business-radio-dun.vercel.app/",
-            github: "https://github.com/Chiblessed/business-radio",
-          },
-          {
-            title: "Selhono",
-            img: Image2,
-            live: "https://selhono-interior.netlify.app/",
-            github: "https://github.com/Chiblessed/selhono",
-          },
-          {
-            title: "Afrika",
-            img: Image4,
-            live: "https://afri-tawny.vercel.app//",
-            github: "https://github.com/Chiblessed/afri",
-          },
-          {
-            title: "Jacob Grønberg",
-            img: Image1,
-            live: "https://jacob-peach.vercel.app/",
-            github: "https://github.com/Chiblessed/jacob",
-          },
-        ].map(({ title, img, live, github }, i) => (
-          <div
-            key={i}
-            className="hover-body overflow-hidden first:border-t-none border-t border-t-third w-full flex items-center justify-between py-6 cursor-pointer"
-          >
-            <p className="text-2xl sm:text-xl text-second">{title}</p>
-            <div className="hover-img sm:hidden absolute w-[550px] h-[250px] left-1/2 translate-x-[-50%] translate-y-[50%] transition-all duration-500 ease-out cursor-none opacity-0">
-              <Image
-                src={img}
-                width={300}
-                height={200}
-                alt={title}
-                className="hidden-img w-full h-full object-cover relative"
-              />
-            </div>
-            <div className="flex items-center justify-center gap-3">
-              <Link href={live} target="_blank">
-                <WorkButton>
-                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
-                    Live
+        <div className="flex flex-col gap-8">
+          {works.map(
+            ({ title, img, live, github, description, category }, i) => (
+              <div
+                key={i}
+                ref={(el) => (itemsRef.current[i] = el)}
+                className="hover-body overflow-hidden first:border-t-none bg-third w-full flex sm:flex-col items-start px-6 gap-8 justify-between py-6 rounded-2xl cursor-pointer transition-all duration-300"
+              >
+                <div>
+                  <h2 className="text-primary text-4xl pb-3">{title}</h2>
+                  <p className="text-primary text-base font-karla max-w-4xl py-7">
+                    {description}
                   </p>
-                </WorkButton>
-              </Link>
-              <Link href={github} target="_blank">
-                <WorkButton>
-                  <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
-                    Github
-                  </p>
-                </WorkButton>
-              </Link>
-            </div>
-          </div>
-        ))}
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {Array.isArray(category) ? (
+                      category.map((cat, idx) => (
+                        <p
+                          key={idx}
+                          className="bg-primary/30 px-3 py-2 rounded-3xl text-primary text-sm"
+                        >
+                          {cat}
+                        </p>
+                      ))
+                    ) : (
+                      <p className="bg-primary/30 px-3 py-2 rounded-3xl text-primary text-sm">
+                        {category}
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex items-start justify-start gap-3 md:mt-3 pt-8 font-karla">
+                    <Link
+                      href={live}
+                      className="border border-primary/75 rounded-2xl"
+                    >
+                      <WorkButton>
+                        <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                          Live
+                        </p>
+                      </WorkButton>
+                    </Link>
+                    <Link
+                      href={github}
+                      className="border border-primary/75 rounded-2xl"
+                    >
+                      <WorkButton>
+                        <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+                          Github
+                        </p>
+                      </WorkButton>
+                    </Link>
+                  </div>
+                </div>
+
+                <Image
+                  src={img}
+                  alt={title}
+                  width={1200}
+                  height={1200}
+                  className="transition-transform duration-300 rounded-2xl"
+                />
+              </div>
+            )
+          )}
+        </div>
+
         <div className="w-44 h-20 mx-auto mt-5">
           <Link href="/works">
-            <WorkButton>
-              <p className="text-lg sm:text-base transition-colors duration-500 ease-linear z-50">
+            <WorkButton className="border border-second">
+              <p className="text-lg sm:text-base text-third  transition-colors duration-500 ease-linear z-50">
                 More Work
               </p>
             </WorkButton>
