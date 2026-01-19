@@ -29,7 +29,7 @@ const Work = () => {
           <h2 className="text-third font-oswald text-[10rem] leading-[8rem] pb-8  sm:text-[4rem] sm:leading-[5rem] uppercase">
             Selected Works
           </h2>
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5 ">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5 ">
             <div className="flex items-start justify-center gap-3 sm:flex-col sm:w-[100%]">
               <Image
                 src={Image6}
@@ -92,7 +92,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image5} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -145,7 +145,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image8} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -206,7 +206,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image9} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -266,7 +266,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image1} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -317,7 +317,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image7} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -376,7 +376,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image3} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -441,7 +441,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image4} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
@@ -501,7 +501,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between sm:flex-col sm:mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
+          <div className="flex items-center justify-between sm:flex-col mb-6 md:flex-col bg-third px-3 rounded-2xl py-5">
             <div className="flex items-start justify-center sm:flex-col gap-3">
               <Image src={Image2} width={500} height={500} alt="project1" />
               <div className="flex flex-col">
