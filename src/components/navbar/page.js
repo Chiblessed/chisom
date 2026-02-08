@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="my-11 z-50 sm:my-16  rounded-3xl sm:flex sm:items-center sm:justify-between sm:w-full sm:py-3 sm:px-5 bg-primary/85 fixed top-0 left-1/2 -translate-x-1/2 ">
+      <header className="my-11 z-50 sm:my-16 shadow-md shadow-third rounded-3xl sm:flex sm:items-center sm:justify-between sm:w-full sm:py-3 sm:px-5 bg-primary/85 fixed top-0 left-1/2 -translate-x-1/2 ">
         <p className="sm:visible md:hidden">Chisom</p>
         <nav>
           <ul className="flex items-center justify-center gap-4 sm:hidden">

@@ -15,7 +15,7 @@ function Footer({ contactRef }) {
       >
         <FooterScroll />
         <div className="px-16 sm:px-3">
-          <div className="flex py-24 sm:flex-col items-center justify-center gap-12">
+          <div className="flex py-24 sm:flex-col items-center justify-center gap-12 md:grid md:grid-cols-2">
             <button className="bg-primary/75 text-third px-9 py-3 rounded-3xl text-[3rem]">
               <a
                 href="https://www.linkedin.com/in/chisom-ohanu-897a37230/"
@@ -47,7 +47,7 @@ function Footer({ contactRef }) {
               onClick={() => {
                 const subject = encodeURIComponent("Let's Build Your Idea");
                 const body = encodeURIComponent(
-                  "Hi, my name is [Your Name], and I want to discuss building my idea with you."
+                  "Hi, my name is [Your Name], and I want to discuss building my idea with you.",
                 );
                 window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
               }}

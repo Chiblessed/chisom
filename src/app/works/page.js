@@ -24,7 +24,7 @@ const Work = () => {
 
   return (
     <>
-      <main className="bg-primary h-full px-16 sm:px-3 md:px-3 lg:px-16">
+      <main className="bg-primary h-full px-16 sm:pt-28 sm:px-3 md:px-3 lg:px-16">
         <section className="flex flex-col">
           <h2 className="text-third font-oswald text-[10rem] leading-[8rem] pb-8  sm:text-[4rem] sm:leading-[5rem] uppercase">
             Selected Works

@@ -34,7 +34,15 @@ export default function Work() {
       title: "African Business Radio",
       description:
         "African Business Radio is a podcast platform offering diverse channels across Kids & Parenting, Religion, Sports, and Technology. With smart filtering and sorting, users can easily discover and enjoy content that informs, inspires, and connects with the African experience.",
-      category: "Frontend Development",
+      category: [
+        "Frontend Development",
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "React Query",
+        "Tailwind CSS",
+      ],
       img: Image3,
       live: "https://african-business-radio-dun.vercel.app/",
       github: "https://github.com/Chiblessed/business-radio",
@@ -43,7 +51,13 @@ export default function Work() {
       title: "Selhono",
       description:
         " Selhono is an interior design platform that showcases elegant design projects and offers tailored services. From concept to completion, users can explore Selhono’s portfolio and discover how beauty meets functionality in every space.",
-      category: ["Frontend Development"],
+      category: [
+        "Frontend Development",
+        "Nuxt.js",
+        "GSAP",
+        "Tailwind CSS",
+        "Website",
+      ],
       img: Image2,
       live: "https://selhono-interior.netlify.app/",
       github: "https://github.com/Chiblessed/selhono",
@@ -52,7 +66,13 @@ export default function Work() {
       title: "Afrika",
       description:
         "  Afrika is an e-commerce platform that addresses key challenges in African markets. It empowers rural African fashion designers by connecting them directly with potential customers, helping to showcase and spread the rich cultural heritage of Africa through authentic fashion.",
-      category: ["Frontend Development", "E-commerce Site"],
+      category: [
+        "Frontend Development",
+        "E-commerce Site",
+        "Restful API",
+        "Next.js",
+        "Tailwind CSS",
+      ],
       img: Image4,
       live: "https://afri-tawny.vercel.app/",
       github: "https://github.com/Chiblessed/afri",
@@ -61,7 +81,13 @@ export default function Work() {
       title: "Jacob Grønberg",
       description:
         "This portfolio breaks convention with a minimalist yet striking design, mirroring the photographer's signature style. Seamless animations and intentional whitespace let each image command attention, while the unconventional layout reflects a modern editorail eye.",
-      category: ["Frontend Development", "Portfolio"],
+      category: [
+        "Frontend Development",
+        "Portfolio",
+        "Next.js",
+        "Tailwind CSS",
+        "GSAP",
+      ],
       img: Image1,
       live: "https://jacob-peach.vercel.app/",
       github: "https://github.com/Chiblessed/jacob",
@@ -81,7 +107,7 @@ export default function Work() {
               <div
                 key={i}
                 ref={(el) => (itemsRef.current[i] = el)}
-                className="hover-body overflow-hidden first:border-t-none bg-third w-full flex sm:flex-col items-start px-6 gap-8 justify-between py-6 rounded-2xl cursor-pointer transition-all duration-300"
+                className="hover-body overflow-hidden first:border-t-none bg-third w-full flex sm:flex-col md:flex-col items-start px-6 gap-8 justify-between py-6 rounded-2xl cursor-pointer transition-all duration-300"
               >
                 <div>
                   <h2 className="text-primary text-4xl pb-3">{title}</h2>
@@ -136,7 +162,7 @@ export default function Work() {
                   className="transition-transform duration-300 rounded-2xl"
                 />
               </div>
-            )
+            ),
           )}
         </div>
 

@@ -27,7 +27,6 @@ const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-      tl.fromTo(".hero-image", { opacity: 0 }, { opacity: 1 });
       const splitText = new SplitType(".more", { types: "words, chars" });
       tl.fromTo(
         splitText.words,
@@ -39,7 +38,7 @@ const Hero = () => {
           stagger: 0.05,
           ease: "power1.out",
         },
-        "+=0.2"
+        "+=0.2",
       );
 
       tl.fromTo(
@@ -57,7 +56,7 @@ const Hero = () => {
           delay: 0.2,
           ease: "power2.inOut",
         },
-        "-=0.5"
+        "-=0.5",
       );
 
       tl.fromTo(
@@ -69,7 +68,7 @@ const Hero = () => {
           duration: 0.6,
           stagger: 0.2,
         },
-        "-=0.1"
+        "-=0.1",
       );
 
       gsap.to(dotRef.current, {
@@ -90,18 +89,8 @@ const Hero = () => {
     <>
       <main
         ref={container}
-        className="h-screen relative sm:h-full md:h-1/2 overflow-hidden sm:px-3"
+        className="h-screen relative bg-third sm:h-full md:h-full overflow-hidden sm:px-3"
       >
-        {/* Background Image */}
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src={BannerImg}
-            alt="banner"
-            fill
-            className="object-cover w-full h-full"
-          />
-        </div>
-
         <section className="pt-10 sm:px-3 px-20 w-full h-screen flex flex-col items-center justify-center font-karla">
           <div className="flex pt-36 relative items-start justify-start  w-full pb-20">
             <div className="flex flex-col">
@@ -112,7 +101,7 @@ const Hero = () => {
                 </p>
               </div>
               <p
-                className="max-w-lg pt-2 more text-zinc-900         [text-shadow:4px_4px_12px_rgba(0,0,0,0.35)]
+                className="max-w-lg pt-2 more text-primary         [text-shadow:4px_4px_12px_rgba(0,0,0,0.35)]
  text-base"
               >
                 Hello, I’m Chisom Ohanu, Product Designer & Frontend Developer.
@@ -136,7 +125,7 @@ const Hero = () => {
                   onClick={() => {
                     const subject = encodeURIComponent("Let's Build Your Idea");
                     const body = encodeURIComponent(
-                      "Hi, my name is [Your Name], and I want to discuss building my idea with you."
+                      "Hi, my name is [Your Name], and I want to discuss building my idea with you.",
                     );
                     window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
                   }}
@@ -151,8 +140,8 @@ const Hero = () => {
           <h2
             className="
         text-[150px] font-titan font-semibold header
-        w-full sm:text-[40px] sm:pb-8 md:text-[150px]
-        whitespace-nowrap text-center cursor-pointer relative z-20
+        w-full sm:text-[45px] sm:pb-2 md:text-[150px]
+        whitespace-nowrap md:whitespace-break-spaces md:leading-snug text-center cursor-pointer relative z-20
         text-second
         [text-shadow:4px_4px_12px_rgba(0,0,0,0.35)]
       "

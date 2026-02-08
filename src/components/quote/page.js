@@ -29,7 +29,7 @@ const MiniAbout = () => {
           end: "top 55%",
           scrub: true,
         },
-      }
+      },
     );
     const splitText2 = new SplitType(".about", { types: "words, chars" });
 
@@ -45,7 +45,7 @@ const MiniAbout = () => {
         stagger: 0.08,
         duration: 0.4,
         ease: "easeInOut",
-      }
+      },
     );
 
     return () => {
@@ -55,8 +55,8 @@ const MiniAbout = () => {
 
   return (
     <>
-      <motion.main className="bg-primary text-third text-center px-20 sm:px-3 font-karla py-14">
-        <section className="flex sm:flex-col items-start justify-between  gap-[6vw]">
+      <motion.main className="bg-primary text-third text-center px-20 sm:px-3 font-karla py-14 md:px-5 ">
+        <section className="flex sm:flex-col items-start justify-between md:flex-col md:items-center gap-[6vw]">
           <div className="w-[500px] h-1/2 sm:w-[350px] overflow-hidden rounded-2xl">
             <Image
               src={MainImage}
@@ -70,31 +70,33 @@ const MiniAbout = () => {
           <div className="flex flex-col items-start max-w-2xl gap-8">
             <h2 className="font-titan text-base">(ABOUT ME)</h2>
             <p className="text-base quote text-left ">
-              I started as a frontend developer, but along the way, I became
-              more curious about why users interact with products the way they
-              do, not just how to build them. That curiosity naturally led me
-              into product design. Today, I focus on designing and building
-              user-centered digital experiences that help startups,
-              organizations, and professionals communicate clearly and serve
-              their users better. I approach every project by first
-              understanding the problem, the users, and the context, then
-              designing solutions that feel intuitive, accessible, and
-              intentional. My work sits at the intersection of design and
-              engineering. I translate ideas and requirements into wireframes,
-              user flows, and high-fidelity interfaces, then bring them to life
-              with clean, responsive frontend code.
+              I started my career as a frontend developer, focused on building
+              interfaces and bringing designs to life with code. Over time, I
+              became increasingly curious about why users interact with products
+              the way they do, not just how to build them. That curiosity
+              naturally led me into product design. Today, I work at the
+              intersection of product design and frontend development, designing
+              and building user-centered digital experiences for startups,
+              organizations, and professionals. I approach every project by
+              first understanding the problem, the users, and the context, then
+              crafting solutions that feel intuitive, accessible, and
+              intentional. My process spans from translating ideas and
+              requirements into user flows, wireframes, and high-fidelity
+              interfaces, to implementing them with clean, responsive frontend
+              code. This dual perspective allows me to create products that are
+              not only visually engaging, but also practical, scalable, and easy
+              to use.
             </p>
             <p className="text-base sm:text-base  text-left quote">
-              This allows me to design products that are not only visually
-              engaging but also practical, accessible, and scalable. I believe
-              good design is about clarity and ease. Every design decision
-              should guide users naturally, reduce friction, and support
+              I believe good design is about clarity and ease. Every decision
+              should reduce friction, guide users naturally, and support
               meaningful outcomes. Whether I’m designing a new product,
               improving usability, or refining an existing experience, my goal
-              is to create digital products that work, simply and effectively. I
-              enjoy collaborating with teams that value thoughtful design,
-              attention to detail, and impact-driven solutions. Let’s build
-              digital experiences that users understand, trust, and enjoy.
+              is simple: to build digital products that work, clearly,
+              effectively, and with purpose. I enjoy collaborating with teams
+              that value thoughtful design, attention to detail, and
+              impact-driven solutions. Let’s build digital experiences users
+              understand, trust, and enjoy.
             </p>
             <Button>
               <Link
